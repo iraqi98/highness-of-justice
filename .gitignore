@@ -50,3 +50,6 @@ brand/*.pdf
 brand/*.png
 brand/*.jpg
 brand/*.jpeg
+
+# client review documents (shared outside git)
+brand/client-review/
