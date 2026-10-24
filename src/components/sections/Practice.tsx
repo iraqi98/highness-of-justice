@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { images } from '@/config/images';
+import { practiceAnchor } from '@/lib/links';
 import { Container, SectionHeading, pad } from '../ui';
 
 // Same order as practice.items in messages/*.json
@@ -49,7 +50,7 @@ export async function Practice() {
           {items.map((item, i) => {
             const Icon = ICONS[i];
             return (
-              <li key={item.title} data-reveal style={{ ['--reveal-delay' as string]: `${(i % 2) * 80}ms` }}>
+              <li key={item.title} id={practiceAnchor(i)} className="scroll-mt-28" data-reveal style={{ ['--reveal-delay' as string]: `${(i % 2) * 80}ms` }}>
                 <details className="group rounded-2xl border border-line bg-card transition-shadow duration-300 hover:shadow-lg hover:shadow-navy/5 open:shadow-xl open:shadow-navy/5">
                   <summary className="flex cursor-pointer flex-col gap-6 rounded-2xl p-6 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy sm:p-7 dark:focus-visible:outline-white">
                     <span className="flex items-center justify-between">

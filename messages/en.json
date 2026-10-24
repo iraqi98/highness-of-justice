@@ -170,7 +170,8 @@
       { "title": "Residency & permits", "body": "Residency and work permits for foreign staff." },
       { "title": "Stay compliant", "body": "Contracts, labour matters, renewals and filings." }
     ],
-    "cta": "Start your registration"
+    "cta": "Start your registration",
+    "more": "Learn more for foreign companies"
   },
   "process": {
     "eyebrow": "How we work",
@@ -258,6 +259,91 @@
     "instagram": "Instagram",
     "facebook": "Facebook",
     "googleMaps": "Google Maps"
+  },
+  "fc": {
+    "meta": {
+      "title": "Company Registration in Iraq for Foreign Companies | Highness of Justice, Law Firm in Baghdad",
+      "description": "Foreign company lawyers in Iraq: registration of foreign branches and representative offices, tax and social security files, residency and work permits for foreign staff, and ongoing compliance. Highness of Justice Law Firm & Legal Consultancy, Baghdad."
+    },
+    "breadcrumb": "Foreign companies",
+    "hero": {
+      "eyebrow": "For foreign companies",
+      "title": "Your legal partner for entering and operating in Iraq.",
+      "body": "Highness of Justice is a Baghdad law firm and legal consultancy. We help create a stable legal environment for local and international investment, with a particular focus on helping foreign companies comply with Iraqi law to the highest professional standards.",
+      "cta": "Book a consultation",
+      "whatsapp": "Message us on WhatsApp",
+      "waMessage": "Hello Highness of Justice, we are a foreign company and would like to discuss setting up in Iraq (company or branch registration).",
+      "points": [
+        "Based in Baghdad, Al-Mansour",
+        "Arabic and English",
+        "Scope, timeline and fees agreed in writing"
+      ]
+    },
+    "audience": {
+      "eyebrow": "Who this is for",
+      "title": "For companies and investors entering the Iraqi market",
+      "items": [
+        {
+          "title": "Foreign companies",
+          "body": "Entering Iraq, opening a branch or operating under Iraqi law."
+        },
+        {
+          "title": "Investors",
+          "body": "Support for investors seeking to enter and operate within the Iraqi market in full compliance with applicable legal and regulatory frameworks."
+        },
+        {
+          "title": "Branches & representative offices",
+          "body": "Registration of foreign branches and representative offices, and completion of registration procedures before the relevant authorities."
+        },
+        {
+          "title": "Foreign staff & executives",
+          "body": "Work visa and residency procedures, work permits, and administrative support for expatriate staff and executives."
+        }
+      ]
+    },
+    "services": {
+      "eyebrow": "Related practice areas",
+      "title": "Services for foreign companies",
+      "link": "View details"
+    },
+    "why": {
+      "ratingNote": "Rated by our clients on Google"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Questions foreign companies ask us",
+      "note": "Information on this page is general and is not legal advice.",
+      "items": [
+        {
+          "q": "Can you register a branch or representative office of a foreign company in Iraq?",
+          "a": "Yes. We register foreign branches and representative offices, prepare and follow up the legal incorporation documents, and complete the registration procedures before the relevant authorities."
+        },
+        {
+          "q": "What are the main steps for a foreign company?",
+          "a": "Our foreign-company track has four steps: register the branch (prepare, legalise and file the branch documents); open the company's tax and social security files; arrange residency and work permits for foreign staff; and stay compliant with contracts, labour matters, renewals and filings."
+        },
+        {
+          "q": "Can you handle work permits and residency for our foreign employees?",
+          "a": "Yes. We process work visa and residency procedures, obtain work permits and authorizations for foreign employees, and provide administrative support for expatriate staff and executives."
+        },
+        {
+          "q": "Do you advise on Iraqi tax and social security?",
+          "a": "Yes. We provide legal consultations on Iraqi tax regulations, monitor companies' tax obligations, represent companies in tax disputes, and handle social security and employment insurance matters."
+        },
+        {
+          "q": "Can we work with you in English?",
+          "a": "Yes. Advice, documents and correspondence are available in both Arabic and English."
+        },
+        {
+          "q": "How are scope and fees agreed?",
+          "a": "Scope, timeline and fees are agreed in writing before work begins. Each engagement starts with a consultation and a review of your documents, followed by a written proposal."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Let's discuss your next step in Iraq.",
+      "body": "Book a consultation, or message us on WhatsApp to tell us about your plans."
+    }
   },
   "footer": {
     "quickLinks": "Quick links",

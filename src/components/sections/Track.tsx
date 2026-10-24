@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { images } from '@/config/images';
+import { FOREIGN_COMPANIES, pageHref } from '@/lib/links';
 import { Container, SectionHeading, btn } from '../ui';
 
 /** The foreign-company track: the firm's key differentiator, set apart on navy with a Baghdad backdrop. */
@@ -25,10 +26,13 @@ export async function Track() {
       <Container>
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
           <SectionHeading eyebrow={t('eyebrow')} title={t('title')} tone="light" className="lg:col-span-8" />
-          <div className="lg:col-span-4 lg:text-end" data-reveal>
-            <a href="#contact" className={`${btn.base} ${btn.light} px-7 py-3.5`}>
-              {t('cta')}
+          <div className="flex flex-col items-start gap-4 lg:col-span-4 lg:items-end" data-reveal>
+            <a href={pageHref(locale, FOREIGN_COMPANIES)} className={`${btn.base} ${btn.light} px-7 py-3.5`}>
+              {t('more')}
               <ArrowRight aria-hidden className="size-4 rtl:-scale-x-100" />
+            </a>
+            <a href="#contact" className="text-sm font-semibold text-mist/80 underline-offset-4 hover:text-white hover:underline">
+              {t('cta')}
             </a>
           </div>
         </div>

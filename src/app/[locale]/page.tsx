@@ -3,6 +3,7 @@ import { absoluteUrl, site } from '@/config/site';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { RevealObserver } from '@/components/RevealObserver';
+import { OpenFromHash } from '@/components/OpenFromHash';
 import { Hero } from '@/components/sections/Hero';
 import { About } from '@/components/sections/About';
 import { Practice } from '@/components/sections/Practice';
@@ -82,6 +83,7 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
       </main>
       <Footer />
       <RevealObserver />
+      <OpenFromHash />
     </>
   );
 }

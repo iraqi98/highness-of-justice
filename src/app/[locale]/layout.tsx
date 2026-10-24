@@ -3,8 +3,9 @@ import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
-import { absoluteUrl, site } from '@/config/site';
+import { absoluteUrl } from '@/config/site';
 import { withBase } from '@/config/base-path';
+import { pageMetadata } from '@/lib/metadata';
 import { fontClassName } from '@/styles/fonts';
 
 // Runs before paint: marks JS as available (for reveal animations) and applies the saved theme.
@@ -27,28 +28,8 @@ export async function generateMetadata({ params }: LayoutProps<'/[locale]'>): Pr
   const t = await getTranslations({ locale, namespace: 'meta' });
   return {
     metadataBase: new URL(absoluteUrl('/')),
-    title: t('title'),
-    description: t('description'),
-    alternates: {
-      canonical: absoluteUrl(`/${locale}/`),
-      languages: { ar: absoluteUrl('/ar/'), en: absoluteUrl('/en/'), 'x-default': absoluteUrl('/ar/') },
-    },
-    openGraph: {
-      type: 'website',
-      url: absoluteUrl(`/${locale}/`),
-      siteName: locale === 'ar' ? site.name.ar : site.name.en,
-      title: t('title'),
-      description: t('description'),
-      locale: locale === 'ar' ? 'ar_IQ' : 'en_US',
-      alternateLocale: locale === 'ar' ? ['en_US'] : ['ar_IQ'],
-      images: [{ url: absoluteUrl('/og.png'), width: 1200, height: 630, alt: locale === 'ar' ? site.name.ar : site.name.en }],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: t('title'),
-      description: t('description'),
-      images: [absoluteUrl('/og.png')],
-    },
+    // Home page defaults; other pages override these keys with their own pageMetadata()
+    ...pageMetadata({ locale, title: t('title'), description: t('description') }),
     icons: {
       icon: [
         { url: withBase('/favicon.ico'), sizes: 'any' },

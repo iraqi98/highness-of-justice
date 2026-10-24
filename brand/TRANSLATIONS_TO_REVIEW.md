@@ -119,3 +119,46 @@ These labels are not in the brand material. They were written for the site in bo
 
 - **Tax & Financial Legal Advisory, 2nd point (English):** the profile repeated "Obtaining work permits…" by mistake. The site uses "Monitoring companies' tax obligations", which matches the Arabic «متابعة الالتزامات الضريبية للشركات».
 - The Arabic service bullets were cleaned of PDF extraction errors (for example «ابل» → «بال», «الستشارات» → «الاستشارات»). The wording is otherwise unchanged.
+
+---
+
+## Foreign companies page — needs client legal review
+
+Page: `/en/foreign-companies/` and `/ar/foreign-companies/`. All content was assembled **only** from BRAND.md: the foreign-company track, the service bullets, who we serve, and why choose us. No legal requirements, timelines, fees, document lists or procedures were added. The items below are written in general terms or combine several source sentences, so a lawyer at the firm should confirm them before launch.
+
+### FAQ answers (also published as FAQPage structured data for search engines)
+
+| # | Question (EN / AR) | Answer (EN / AR) | Source in BRAND.md |
+|---|---|---|---|
+| 1 | Can you register a branch or representative office of a foreign company in Iraq?<br>هل يمكنكم تسجيل فرع أو مكتب تمثيلي لشركة أجنبية في العراق؟ | Yes. We register foreign branches and representative offices, prepare and follow up the legal incorporation documents, and complete the registration procedures before the relevant authorities.<br>نعم. نتولى تأسيس الفروع والمكاتب التمثيلية للشركات الأجنبية، وإعداد ومتابعة الوثائق القانونية الخاصة بالتأسيس، واستكمال إجراءات التسجيل لدى الجهات المختصة. | §7.3 service 01 (Company Formation & Foreign Branch Registration) |
+| 2 | What are the main steps for a foreign company?<br>ما هي الخطوات الرئيسية للشركة الأجنبية؟ | Our foreign-company track has four steps: register the branch (prepare, legalise and file the branch documents); open the company's tax and social security files; arrange residency and work permits for foreign staff; and stay compliant with contracts, labour matters, renewals and filings.<br>يتكون مسار الشركات الأجنبية لدينا من أربع خطوات: تسجيل الفرع (إعداد وثائق الفرع وتصديقها وتقديمها)، ثم فتح الملف الضريبي للشركة وملف الضمان الاجتماعي، ثم الإقامة وتصاريح العمل للموظفين الأجانب، ثم الامتثال المستمر في العقود وشؤون العمل والتجديدات والإيداعات الرسمية. | §7.6 foreign-company track |
+| 3 | Can you handle work permits and residency for our foreign employees?<br>هل تتولون تصاريح العمل والإقامة لموظفينا الأجانب؟ | Yes. We process work visa and residency procedures, obtain work permits and authorizations for foreign employees, and provide administrative support for expatriate staff and executives.<br>نعم. نتابع إجراءات تأشيرات العمل والإقامة، ونستصدر إجازات وتصاريح العمل للأجانب، ونقدم الدعم الإداري للموظفين الأجانب. | §7.3 service 10 (Work Visas & Foreign Personnel Support) |
+| 4 | Do you advise on Iraqi tax and social security?<br>هل تقدمون الاستشارات في الضرائب والضمان الاجتماعي في العراق؟ | Yes. We provide legal consultations on Iraqi tax regulations, monitor companies' tax obligations, represent companies in tax disputes, and handle social security and employment insurance matters.<br>نعم. نقدم الاستشارات المتعلقة بالضرائب العراقية، ونتابع الالتزامات الضريبية للشركات، ونمثلها في المنازعات الضريبية، ونتابع قضايا الضمان الاجتماعي والتأمينات. | §7.3 service 02 (Tax) + service 06 (Labor Law, social security) |
+| 5 | Can we work with you in English?<br>هل يمكننا التعامل معكم باللغة الإنجليزية؟ | Yes. Advice, documents and correspondence are available in both Arabic and English.<br>نعم. نقدم المشورة والوثائق والمراسلات باللغتين العربية والإنجليزية. | §7.8 Why choose us: Arabic and English |
+| 6 | How are scope and fees agreed?<br>كيف يتم الاتفاق على النطاق والأتعاب؟ | Scope, timeline and fees are agreed in writing before work begins. Each engagement starts with a consultation and a review of your documents, followed by a written proposal.<br>يُتفق على النطاق والجدول الزمني والأتعاب كتابياً قبل بدء العمل. يبدأ كل تعاقد باستشارة ومراجعة لمستنداتك، يليها عرض مكتوب. | §7.7 How we work + §7.8 Clear terms |
+
+### Other statements to confirm
+
+| Key | English | Arabic | Note |
+|---|---|---|---|
+| `fc.audience.items[1]` (Investors) | Support for investors seeking to enter and operate within the Iraqi market in full compliance with applicable legal and regulatory frameworks. | دعم المستثمرين الراغبين بالدخول إلى السوق العراقي والعمل وفق الأطر القانونية والتنظيمية المعتمدة. | Rephrased from the About text (§7.1) |
+| `fc.audience.items[2]` (Branches & rep. offices) | Registration of foreign branches and representative offices, and completion of registration procedures before the relevant authorities. | تأسيس الفروع والمكاتب التمثيلية للشركات الأجنبية، واستكمال إجراءات التسجيل لدى الجهات المختصة. | Combined from service 01 bullets |
+| `fc.audience.items[3]` (Foreign staff) | Work visa and residency procedures, work permits, and administrative support for expatriate staff and executives. | متابعة إجراءات تأشيرات العمل والإقامة، وإصدار تصاريح العمل، وتقديم الدعم الإداري للموظفين الأجانب. | Combined from service 10 bullets |
+| `fc.meta.description` | Foreign company lawyers in Iraq: registration of foreign branches and representative offices, tax and social security files, residency and work permits for foreign staff, and ongoing compliance. Highness of Justice Law Firm & Legal Consultancy, Baghdad. | محامون للشركات الأجنبية في العراق: تسجيل الفروع والمكاتب التمثيلية للشركات الأجنبية، وفتح الملفات الضريبية وملفات الضمان الاجتماعي، والإقامة وتصاريح العمل للموظفين الأجانب، والامتثال المستمر. شركة سمو العدالة للمحاماة والاستشارات القانونية، بغداد. | Search-result description |
+| `fc.hero.waMessage` | Hello Highness of Justice, we are a foreign company and would like to discuss setting up in Iraq (company or branch registration). | مرحباً سمو العدالة، نحن شركة أجنبية ونرغب في مناقشة تأسيس أعمالنا في العراق (تسجيل شركة أو فرع). | Pre-filled WhatsApp message (sent in the visitor's page language) |
+
+### New wording on this page (headings and labels)
+
+| Key | English | Arabic |
+|---|---|---|
+| `fc.meta.title` | Company Registration in Iraq for Foreign Companies | Highness of Justice, Law Firm in Baghdad | تسجيل الشركات الأجنبية في العراق | شركة سمو العدالة للمحاماة والاستشارات القانونية – بغداد |
+| `fc.hero.eyebrow / title` | For foreign companies — Your legal partner for entering and operating in Iraq. | للشركات الأجنبية — شريكك القانوني لدخول السوق العراقي والعمل فيه. |
+| `fc.hero.points` | Based in Baghdad, Al-Mansour · Arabic and English · Scope, timeline and fees agreed in writing | مقرنا في بغداد، المنصور · بالعربية والإنجليزية · النطاق والجدول الزمني والأتعاب متفق عليها كتابياً |
+| `fc.hero.cta / whatsapp` | Book a consultation / Message us on WhatsApp | احجز استشارة / راسلنا عبر واتساب |
+| `fc.audience.eyebrow / title` | Who this is for — For companies and investors entering the Iraqi market | لمن هذه الخدمات — للشركات والمستثمرين الراغبين بدخول السوق العراقي |
+| `fc.audience titles` | Foreign companies · Investors · Branches & representative offices · Foreign staff & executives | الشركات الأجنبية · المستثمرون · الفروع والمكاتب التمثيلية · الكوادر والمديرون الأجانب |
+| `fc.services` | Related practice areas — Services for foreign companies — View details | مجالات الممارسة ذات الصلة — خدماتنا للشركات الأجنبية — عرض التفاصيل |
+| `fc.why.ratingNote` | Rated by our clients on Google | تقييم عملائنا على Google |
+| `fc.faq.eyebrow / title / note` | FAQ — Questions foreign companies ask us — Information on this page is general and is not legal advice. | الأسئلة الشائعة — أسئلة تطرحها علينا الشركات الأجنبية — المعلومات الواردة في هذه الصفحة عامة ولا تُعد استشارة قانونية. |
+| `fc.cta` | Let's discuss your next step in Iraq. Book a consultation, or message us on WhatsApp to tell us about your plans. | لنناقش خطوتك التالية في العراق. احجز استشارة، أو راسلنا عبر واتساب لتخبرنا عن خططك. |
+| `track.more (home page)` | Learn more for foreign companies | المزيد للشركات الأجنبية |

@@ -5,17 +5,24 @@ import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { withBase } from '@/config/base-path';
+import { FOREIGN_COMPANIES, pageHref, type PagePath } from '@/lib/links';
 import { ThemeToggle } from './ThemeToggle';
 import { btn } from './ui';
 
+// Home-page sections, except "track" which is its own page
 const NAV = ['about', 'practice', 'industries', 'track', 'process', 'why', 'contact'] as const;
 
-export function Header() {
+/** @param page the page this header is rendered on, so the language switch stays on it */
+export function Header({ page = '' }: { page?: PagePath }) {
   const t = useTranslations();
   const locale = useLocale();
   const other = locale === 'ar' ? 'en' : 'ar';
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const navHref = (key: (typeof NAV)[number]) =>
+    key === 'track' ? pageHref(locale, FOREIGN_COMPANIES) : pageHref(locale, '', key);
+  const isCurrent = (key: (typeof NAV)[number]) => key === 'track' && page === FOREIGN_COMPANIES;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -44,7 +51,7 @@ export function Header() {
         {t('common.skip')}
       </a>
       <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center gap-3 px-4 sm:px-6 lg:h-20 lg:px-8">
-        <a href="#top" className="flex min-w-0 items-center gap-3" aria-label={t('common.home')}>
+        <a href={pageHref(locale)} className="flex min-w-0 items-center gap-3" aria-label={t('common.home')}>
           <Image src={withBase('/brand/emblem-navy.svg')} alt="" width={44} height={44} loading="eager" className="size-11 dark:hidden" />
           <Image src={withBase('/brand/emblem-white.svg')} alt="" width={44} height={44} loading="eager" className="hidden size-11 dark:block" />
           <span className="flex min-w-0 flex-col leading-tight">
@@ -60,8 +67,9 @@ export function Header() {
             {NAV.map((key) => (
               <li key={key}>
                 <a
-                  href={`#${key}`}
-                  className="whitespace-nowrap rounded-full px-2.5 py-2 text-[13px] font-medium text-muted transition-colors hover:text-ink 2xl:px-3 2xl:text-sm"
+                  href={navHref(key)}
+                  aria-current={isCurrent(key) ? 'page' : undefined}
+                  className="whitespace-nowrap rounded-full px-2.5 py-2 text-[13px] font-medium text-muted transition-colors hover:text-ink aria-[current=page]:text-ink aria-[current=page]:underline aria-[current=page]:decoration-steel aria-[current=page]:underline-offset-8 2xl:px-3 2xl:text-sm"
                 >
                   {t(`nav.${key}`)}
                 </a>
@@ -73,7 +81,7 @@ export function Header() {
         <div className="ms-auto flex items-center gap-1 xl:ms-2">
           {/* Plain <a>: switching locale swaps <html lang/dir>, fonts and metadata, so load a fresh document */}
           <a
-            href={withBase(`/${other}/`)}
+            href={pageHref(other, page)}
             hrefLang={other}
             lang={other}
             aria-label={t('common.switchLanguageLabel')}
@@ -82,7 +90,7 @@ export function Header() {
             {t('common.switchLanguage')}
           </a>
           <ThemeToggle />
-          <a href="#contact" className={`${btn.base} ${btn.primary} ms-2 max-sm:hidden`}>
+          <a href={pageHref(locale, '', 'contact')} className={`${btn.base} ${btn.primary} ms-2 max-sm:hidden`}>
             {t('common.book')}
           </a>
           <button
@@ -104,9 +112,10 @@ export function Header() {
             {NAV.map((key) => (
               <li key={key}>
                 <a
-                  href={`#${key}`}
+                  href={navHref(key)}
+                  aria-current={isCurrent(key) ? 'page' : undefined}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-3 text-base font-medium text-ink hover:bg-soft"
+                  className="block rounded-lg px-3 py-3 text-base font-medium text-ink hover:bg-soft aria-[current=page]:bg-soft"
                 >
                   {t(`nav.${key}`)}
                 </a>
@@ -114,7 +123,7 @@ export function Header() {
             ))}
           </ul>
           <a
-            href="#contact"
+            href={pageHref(locale, '', 'contact')}
             onClick={() => setOpen(false)}
             className={`${btn.base} ${btn.primary} mt-4 w-full sm:hidden`}
           >

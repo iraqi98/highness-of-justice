@@ -3,6 +3,7 @@ import { Mail, MapPin, Phone, type LucideIcon } from 'lucide-react';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { site, whatsappUrl } from '@/config/site';
 import { withBase } from '@/config/base-path';
+import { FOREIGN_COMPANIES, pageHref } from '@/lib/links';
 import { WhatsAppIcon } from './WhatsAppIcon';
 import { FacebookIcon, GoogleMapsIcon, InstagramIcon, LinkedInIcon } from './BrandIcons';
 import { Container } from './ui';
@@ -62,7 +63,7 @@ export async function Footer() {
             {LINKS.map((k) => (
               <li key={k}>
                 <a
-                  href={`#${k}`}
+                  href={k === 'track' ? pageHref(locale, FOREIGN_COMPANIES) : pageHref(locale, '', k)}
                   className="block rounded-lg px-2 py-1.5 text-sm text-mist/75 transition-colors hover:bg-white/5 hover:text-white active:bg-white/10 lg:text-[15px]"
                 >
                   {t(`nav.${k}`)}
