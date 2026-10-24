@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { site } from '@/config/site';
+import { withBase } from '@/config/base-path';
 import { Container } from './ui';
 
 const LINKS = ['about', 'practice', 'industries', 'track', 'process', 'why', 'contact'] as const;
@@ -15,7 +16,7 @@ export async function Footer() {
       <Container className="grid gap-12 py-16 md:grid-cols-12">
         <div className="md:col-span-5">
           <Image
-            src="/brand/logo-white.svg"
+            src={withBase('/brand/logo-white.svg')}
             alt={locale === 'ar' ? site.name.ar : site.name.en}
             width={160}
             height={160}

@@ -4,8 +4,9 @@
  */
 type Photo = { src: string; alt: { ar: string; en: string } };
 
-const unsplash = (id: string) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=1800&q=80`;
+// Images are served as-is (static export, no optimizer), so request a size that fits each use.
+const unsplash = (id: string, width = 1400) =>
+  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${width}&q=80`;
 
 export const images = {
   heroJustice: {
@@ -21,7 +22,7 @@ export const images = {
     alt: { en: 'Central Bank of Iraq tower beside the Tigris in Baghdad', ar: 'برج البنك المركزي العراقي على ضفاف دجلة في بغداد' },
   },
   trackBaghdad: {
-    src: unsplash('1737314417275-92a2657112c8'),
+    src: unsplash('1737314417275-92a2657112c8', 2000),
     alt: { en: 'The Al-Shaheed Monument in Baghdad', ar: 'نصب الشهيد في بغداد' },
   },
   contractSigning: {
@@ -38,35 +39,35 @@ export const images = {
   },
   // Industries
   oilGas: {
-    src: unsplash('1726731782158-fcf6822b6ca4'),
+    src: unsplash('1726731782158-fcf6822b6ca4', 800),
     alt: { en: 'Oil refinery towers and pipework', ar: 'أبراج وأنابيب مصفاة نفط' },
   },
   energy: {
-    src: unsplash('1473341304170-971dccb5ac1e'),
+    src: unsplash('1473341304170-971dccb5ac1e', 800),
     alt: { en: 'High-voltage power lines at sunset', ar: 'خطوط نقل الطاقة الكهربائية عند الغروب' },
   },
   construction: {
-    src: unsplash('1541888946425-d81bb19240f5'),
+    src: unsplash('1541888946425-d81bb19240f5', 800),
     alt: { en: 'Engineers on a large construction site', ar: 'مهندسون في موقع إنشاءات كبير' },
   },
   trade: {
-    src: unsplash('1578575437130-527eed3abbec'),
+    src: unsplash('1578575437130-527eed3abbec', 800),
     alt: { en: 'Container ship being loaded at a port', ar: 'سفينة حاويات قيد التحميل في الميناء' },
   },
   logistics: {
-    src: unsplash('1586528116311-ad8dd3c8310d'),
+    src: unsplash('1586528116311-ad8dd3c8310d', 800),
     alt: { en: 'Large logistics warehouse with stocked shelves', ar: 'مستودع لوجستي كبير برفوف مملوءة' },
   },
   technology: {
-    src: unsplash('1518770660439-4636190af475'),
+    src: unsplash('1518770660439-4636190af475', 800),
     alt: { en: 'Close-up of an electronic circuit board', ar: 'لقطة قريبة للوحة دوائر إلكترونية' },
   },
   healthcare: {
-    src: unsplash('1519494026892-80bbd2d6fd0d'),
+    src: unsplash('1519494026892-80bbd2d6fd0d', 800),
     alt: { en: 'Modern hospital reception', ar: 'استقبال مستشفى حديث' },
   },
   tourism: {
-    src: unsplash('1626304758701-7432c13bc85f'),
+    src: unsplash('1626304758701-7432c13bc85f', 800),
     alt: { en: 'Hillside town beneath rugged mountains', ar: 'بلدة على سفح جبال وعرة' },
   },
 } satisfies Record<string, Photo>;

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
+import { withBase } from '@/config/base-path';
 import { ThemeToggle } from './ThemeToggle';
 import { btn } from './ui';
 
@@ -44,8 +45,8 @@ export function Header() {
       </a>
       <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center gap-3 px-4 sm:px-6 lg:h-20 lg:px-8">
         <a href="#top" className="flex min-w-0 items-center gap-3" aria-label={t('common.home')}>
-          <Image src="/brand/emblem-navy.svg" alt="" width={44} height={44} loading="eager" className="size-11 dark:hidden" />
-          <Image src="/brand/emblem-white.svg" alt="" width={44} height={44} loading="eager" className="hidden size-11 dark:block" />
+          <Image src={withBase('/brand/emblem-navy.svg')} alt="" width={44} height={44} loading="eager" className="size-11 dark:hidden" />
+          <Image src={withBase('/brand/emblem-white.svg')} alt="" width={44} height={44} loading="eager" className="hidden size-11 dark:block" />
           <span className="flex min-w-0 flex-col leading-tight">
             <span className="truncate text-[15px] font-bold text-ink ltr:text-[12px] ltr:uppercase sm:ltr:text-[13px] sm:ltr:tracking-wide">
               {t('brand.shortName')}
@@ -72,7 +73,7 @@ export function Header() {
         <div className="ms-auto flex items-center gap-1 xl:ms-2">
           {/* Plain <a>: switching locale swaps <html lang/dir>, fonts and metadata, so load a fresh document */}
           <a
-            href={`/${other}`}
+            href={withBase(`/${other}/`)}
             hrefLang={other}
             lang={other}
             aria-label={t('common.switchLanguageLabel')}

@@ -10,18 +10,22 @@ import './brand-fonts.css';
  */
 export const USE_BRAND_FONTS = false;
 
+// Only the Arabic subset is preloaded: Arabic text appears on every page (including /en/
+// in the header). Latin glyphs load on demand from the same @font-face rules.
 const plexArabic = IBM_Plex_Sans_Arabic({
-  subsets: ['arabic', 'latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['arabic'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-plex-arabic',
   display: 'swap',
 });
 
 const manrope = Manrope({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800'],
+  weight: ['300', '400', '500', '600', '700'],
   variable: '--font-manrope',
   display: 'swap',
+  // Only used on /en/; not preloaded so Arabic pages don't fetch it.
+  preload: false,
 });
 
 export const fontClassName = [plexArabic.variable, manrope.variable, USE_BRAND_FONTS && 'brand-fonts']

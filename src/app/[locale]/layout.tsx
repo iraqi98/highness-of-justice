@@ -4,10 +4,13 @@ import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { site } from '@/config/site';
+import { withBase } from '@/config/base-path';
 import { fontClassName } from '@/styles/fonts';
 
 // Runs before paint: marks JS as available (for reveal animations) and applies the saved theme.
 const bootScript = `(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))d.classList.add('dark')}catch(e){}})()`;
+
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -27,12 +30,12 @@ export async function generateMetadata({ params }: LayoutProps<'/[locale]'>): Pr
     title: t('title'),
     description: t('description'),
     alternates: {
-      canonical: `/${locale}`,
-      languages: { ar: '/ar', en: '/en', 'x-default': '/ar' },
+      canonical: `/${locale}/`,
+      languages: { ar: '/ar/', en: '/en/', 'x-default': '/ar/' },
     },
     openGraph: {
       type: 'website',
-      url: `/${locale}`,
+      url: `/${locale}/`,
       siteName: locale === 'ar' ? site.name.ar : site.name.en,
       title: t('title'),
       description: t('description'),
@@ -48,10 +51,10 @@ export async function generateMetadata({ params }: LayoutProps<'/[locale]'>): Pr
     },
     icons: {
       icon: [
-        { url: '/favicon.ico', sizes: 'any' },
-        { url: '/favicon.svg', type: 'image/svg+xml' },
+        { url: withBase('/favicon.ico'), sizes: 'any' },
+        { url: withBase('/favicon.svg'), type: 'image/svg+xml' },
       ],
-      apple: '/apple-touch-icon.png',
+      apple: withBase('/apple-touch-icon.png'),
     },
   };
 }
