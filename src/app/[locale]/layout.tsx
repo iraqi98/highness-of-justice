@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { absoluteUrl } from '@/config/site';
 import { withBase } from '@/config/base-path';
@@ -44,6 +44,11 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
+  // Client components (Header, ThemeToggle, OfficeHours, ConsultForm) only use these namespaces
+  const all = await getMessages();
+  const clientMessages = Object.fromEntries(
+    (['common', 'nav', 'brand', 'contact'] as const).map((k) => [k, all[k]]),
+  );
 
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className={fontClassName} data-scroll-behavior="smooth" suppressHydrationWarning>
@@ -51,7 +56,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
         <script dangerouslySetInnerHTML={{ __html: bootScript }} />
       </head>
       <body className="bg-bg text-ink antialiased">
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={clientMessages}>{children}</NextIntlClientProvider>
       </body>
     </html>
   );

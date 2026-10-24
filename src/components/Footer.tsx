@@ -59,6 +59,7 @@ export async function Footer() {
             alt={locale === 'ar' ? site.name.ar : site.name.en}
             width={144}
             height={144}
+            unoptimized
             className="size-28 sm:size-32"
           />
           <p className="mt-4 text-lg font-semibold text-white">{t('footer.tagline')}</p>
@@ -170,7 +171,7 @@ export async function Footer() {
       </Container>
 
       <div className="border-t border-white/10">
-        <Container className="flex flex-col items-center gap-1.5 py-5 text-center text-xs leading-6 text-mist/55 md:flex-row md:justify-between md:gap-6 md:text-start">
+        <Container className="flex flex-col items-center gap-1.5 py-5 text-center text-xs leading-6 text-mist/70 md:flex-row md:justify-between md:gap-6 md:text-start">
           <p>
             <span className="block sm:inline">{t('footer.rights', { year: new Date().getFullYear() })}</span>{' '}
             <span className="block sm:inline">{t('footer.reserved')}</span>

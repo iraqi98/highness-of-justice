@@ -35,7 +35,7 @@ export async function ServicePage({ index }: { index: number }) {
       {/* Hero */}
       <section id="top" className="relative isolate overflow-hidden bg-navy text-white">
         <Container className="grid items-center gap-12 py-12 sm:py-16 lg:grid-cols-12 lg:gap-10 lg:py-20">
-          <div className="lg:col-span-7" data-reveal>
+          <div className="lg:col-span-7">
             <nav aria-label="Breadcrumb">
               <ol className="flex flex-wrap items-center gap-1.5 text-sm text-mist/70">
                 <li>
@@ -77,7 +77,7 @@ export async function ServicePage({ index }: { index: number }) {
               </a>
             </div>
           </div>
-          <div className="relative mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none" data-reveal style={{ ['--reveal-delay' as string]: '150ms' }}>
+          <div className="relative mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none">
             <div className="silver-ring relative aspect-[4/5] overflow-hidden rounded-t-full rounded-b-3xl p-2">
               <div className="relative size-full overflow-hidden rounded-t-full rounded-b-2xl">
                 <Image src={photo.src} alt={photo.alt[locale]} fill preload sizes="(min-width: 1024px) 40vw, (min-width: 640px) 28rem, 100vw" className="object-cover" />

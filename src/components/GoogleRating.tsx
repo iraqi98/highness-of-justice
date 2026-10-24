@@ -24,7 +24,6 @@ export async function GoogleRating({ tone = 'light', className = '' }: { tone?: 
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={t('aria', { value: score, count })}
       className={`group inline-flex items-center gap-2.5 rounded-full px-3.5 py-1.5 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 ${
         onNavy
           ? 'border border-white/15 bg-white/5 text-mist/85 hover:border-white/30 hover:bg-white/10 focus-visible:outline-white'
@@ -43,6 +42,7 @@ export async function GoogleRating({ tone = 'light', className = '' }: { tone?: 
         ·
       </span>
       <span className="group-hover:underline group-hover:underline-offset-4">{t('reviews', { count })}</span>
+      <span className="sr-only"> — {t('opens')}</span>
     </a>
   );
 }

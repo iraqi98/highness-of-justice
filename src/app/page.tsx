@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { absoluteUrl, site } from '@/config/site';
 import { withBase } from '@/config/base-path';
-import { fontClassName } from '@/styles/fonts';
 
 // "/" has no content of its own: send visitors to the default (Arabic) locale.
 // Static hosting has no server redirects, so use meta refresh + JS, with links as a fallback.
@@ -15,8 +14,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootRedirect() {
+  // No web fonts here: the page redirects immediately, so preloading them would be wasted
   return (
-    <html lang="ar" dir="rtl" className={fontClassName}>
+    <html lang="ar" dir="rtl">
       <head>
         <meta httpEquiv="refresh" content={`0; url=${target}`} />
         <script dangerouslySetInnerHTML={{ __html: `location.replace(${JSON.stringify(target)})` }} />

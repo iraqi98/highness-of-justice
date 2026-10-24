@@ -52,9 +52,9 @@ export function Header({ page = '' }: { page?: PagePath }) {
         {t('common.skip')}
       </a>
       <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center gap-3 px-4 sm:px-6 lg:h-20 lg:px-8">
-        <a href={pageHref(locale)} className="flex min-w-0 items-center gap-3" aria-label={t('common.home')}>
-          <Image src={withBase('/brand/emblem-navy.svg')} alt="" width={44} height={44} loading="eager" className="size-11 dark:hidden" />
-          <Image src={withBase('/brand/emblem-white.svg')} alt="" width={44} height={44} loading="eager" className="hidden size-11 dark:block" />
+        <a href={pageHref(locale)} className="flex min-w-0 items-center gap-3">
+          <Image src={withBase('/brand/emblem-navy.svg')} alt="" width={44} height={44} loading="eager" unoptimized className="size-11 dark:hidden" />
+          <Image src={withBase('/brand/emblem-white.svg')} alt="" width={44} height={44} loading="eager" unoptimized className="hidden size-11 dark:block" />
           <span className="flex min-w-0 flex-col leading-tight">
             <span className="truncate text-[15px] font-bold text-ink ltr:text-[12px] ltr:uppercase sm:ltr:text-[13px] sm:ltr:tracking-wide">
               {t('brand.shortName')}

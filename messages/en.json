@@ -11,8 +11,7 @@
     "themeToLight": "Switch to light mode",
     "themeToDark": "Switch to dark mode",
     "switchLanguage": "العربية",
-    "switchLanguageLabel": "التبديل إلى العربية",
-    "home": "Highness of Justice — home"
+    "switchLanguageLabel": "التبديل إلى العربية"
   },
   "nav": {
     "about": "About",
@@ -251,7 +250,7 @@
   },
   "rating": {
     "reviews": "{count} Google reviews",
-    "aria": "Rated {value} out of 5 from {count} Google reviews (opens Google Maps)"
+    "opens": "opens Google Maps"
   },
   "social": {
     "title": "Follow us",

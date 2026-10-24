@@ -19,10 +19,11 @@ export async function Hero() {
         height={900}
         aria-hidden
         loading="eager"
-        className="pointer-events-none absolute -bottom-40 -start-40 -z-10 w-[42rem] max-w-none opacity-[0.04]"
+        unoptimized
+        className="pointer-events-none absolute -bottom-40 -start-40 -z-10 hidden w-[42rem] max-w-none opacity-[0.04] sm:block"
       />
       <Container className="grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-12 lg:gap-10 lg:py-28">
-        <div className="lg:col-span-7" data-reveal>
+        <div className="lg:col-span-7">
           <p className="flex items-center gap-3 text-sm text-mist/80 ltr:text-xs ltr:uppercase ltr:tracking-[0.18em]">
             <span aria-hidden className="h-px w-8 bg-silver" />
             {t('brand.line')}
@@ -39,8 +40,6 @@ export async function Hero() {
 
         <div
           className="relative mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none"
-          data-reveal
-          style={{ ['--reveal-delay' as string]: '150ms' }}
         >
           {/* Arch-topped frame, echoing the arches of the stationery */}
           <div className="silver-ring relative aspect-[4/5] overflow-hidden rounded-t-full rounded-b-3xl p-2 [--ring-fill:#141641]">

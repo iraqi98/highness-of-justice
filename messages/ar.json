@@ -11,8 +11,7 @@
     "themeToLight": "التبديل إلى الوضع الفاتح",
     "themeToDark": "التبديل إلى الوضع الداكن",
     "switchLanguage": "English",
-    "switchLanguageLabel": "Switch to English",
-    "home": "سمو العدالة — الصفحة الرئيسية"
+    "switchLanguageLabel": "Switch to English"
   },
   "nav": {
     "about": "من نحن",
@@ -251,7 +250,7 @@
   },
   "rating": {
     "reviews": "{count} مراجعة على Google",
-    "aria": "تقييم {value} من 5 بناءً على {count} مراجعة على Google (يفتح خرائط Google)"
+    "opens": "يفتح خرائط Google"
   },
   "social": {
     "title": "تابعنا",

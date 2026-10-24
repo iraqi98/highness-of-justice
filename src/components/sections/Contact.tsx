@@ -116,7 +116,7 @@ export async function Contact() {
                         href={site.social.googleMaps}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-navy-400 hover:underline hover:underline-offset-4 dark:text-steel"
+                        className="mt-1 inline-flex items-center gap-1.5 py-1 text-sm font-medium text-navy-400 hover:underline hover:underline-offset-4 dark:text-steel"
                       >
                         <Navigation aria-hidden className="size-3.5 rtl:-scale-x-100" />
                         {t('contact.directions')}

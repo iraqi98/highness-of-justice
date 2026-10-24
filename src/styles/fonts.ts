@@ -24,8 +24,7 @@ const manrope = Manrope({
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-manrope',
   display: 'swap',
-  // Only used on /en/; not preloaded so Arabic pages don't fetch it.
-  preload: false,
+  // Preloaded: a single variable-font file, used on /en/ and for the Latin text on /ar/ pages
 });
 
 export const fontClassName = [plexArabic.variable, manrope.variable, USE_BRAND_FONTS && 'brand-fonts']

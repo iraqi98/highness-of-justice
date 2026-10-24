@@ -12,7 +12,8 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   basePath: basePath || undefined,
   env: { NEXT_PUBLIC_BASE_PATH: basePath },
-  images: { unoptimized: true },
+  // Static export: no optimizer; the loader asks Unsplash for the width each device needs
+  images: { loader: 'custom', loaderFile: './src/lib/image-loader.ts' },
 };
 
 export default withNextIntl(nextConfig);

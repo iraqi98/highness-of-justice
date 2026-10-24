@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { site } from '@/config/site';
 import { withBase } from '@/config/base-path';
-import { fontClassName } from '@/styles/fonts';
 
 export const metadata: Metadata = {
   title: 'الصفحة غير موجودة · Page not found',
@@ -9,10 +8,11 @@ export const metadata: Metadata = {
 };
 
 // Exported as 404.html, which GitHub Pages serves for unknown paths.
+// System fonts only: importing the web fonts here would also preload them on the root redirect page.
 export default function NotFound() {
   return (
-    <html lang="ar" dir="rtl" className={fontClassName}>
-      <body className="grid min-h-screen place-items-center bg-navy p-6 text-white">
+    <html lang="ar" dir="rtl">
+      <body className="grid min-h-screen place-items-center bg-navy p-6 font-[system-ui,sans-serif] text-white">
         <main className="max-w-xl text-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={withBase('/brand/emblem-white.svg')} alt="" width={96} height={96} className="mx-auto size-24" />

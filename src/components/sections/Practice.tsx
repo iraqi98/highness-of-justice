@@ -68,9 +68,10 @@ export async function Practice() {
                 <div className="pointer-events-none relative -mt-11 flex justify-end px-6 pb-6 sm:-mt-12 sm:px-7 sm:pb-7">
                   <a
                     href={pageHref(locale, servicePage(services[i].slug))}
-                    className="pointer-events-auto inline-flex items-center gap-1.5 text-sm font-semibold leading-5 text-ink underline-offset-4 hover:underline"
+                    className="pointer-events-auto -my-1 inline-flex items-center gap-1.5 py-1 text-sm font-semibold leading-5 text-ink underline-offset-4 hover:underline"
                   >
                     {t('learnMore')}
+                    <span className="sr-only"> — {item.title}</span>
                     <ArrowRight aria-hidden className="size-4 rtl:-scale-x-100" />
                   </a>
                 </div>

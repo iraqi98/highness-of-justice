@@ -31,7 +31,7 @@ export async function Track() {
               {t('more')}
               <ArrowRight aria-hidden className="size-4 rtl:-scale-x-100" />
             </a>
-            <a href="#contact" className="text-sm font-semibold text-mist/80 underline-offset-4 hover:text-white hover:underline">
+            <a href="#contact" className="-my-1 inline-block py-1 text-sm font-semibold text-mist/80 underline-offset-4 hover:text-white hover:underline">
               {t('cta')}
             </a>
           </div>
