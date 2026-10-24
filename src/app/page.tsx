@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { site } from '@/config/site';
+import { absoluteUrl, site } from '@/config/site';
 import { withBase } from '@/config/base-path';
 import { fontClassName } from '@/styles/fonts';
 
@@ -8,10 +8,10 @@ import { fontClassName } from '@/styles/fonts';
 const target = withBase('/ar/');
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
+  metadataBase: new URL(absoluteUrl('/')),
   title: `${site.name.ar} · ${site.name.en}`,
   robots: { index: false, follow: true },
-  alternates: { canonical: '/ar/' },
+  alternates: { canonical: absoluteUrl('/ar/') },
 };
 
 export default function RootRedirect() {

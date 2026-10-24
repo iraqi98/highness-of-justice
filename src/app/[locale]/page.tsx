@@ -1,5 +1,5 @@
 import { setRequestLocale } from 'next-intl/server';
-import { site } from '@/config/site';
+import { absoluteUrl, site } from '@/config/site';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { RevealObserver } from '@/components/RevealObserver';
@@ -20,12 +20,12 @@ function legalServiceJsonLd(locale: 'ar' | 'en') {
   return {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
-    '@id': `${site.url}/#organization`,
+    '@id': absoluteUrl('/#organization'),
     name: site.name[locale],
     alternateName: site.name[locale === 'ar' ? 'en' : 'ar'],
-    url: site.url,
-    logo: `${site.url}/brand/logo-1024.png`,
-    image: `${site.url}/og.png`,
+    url: absoluteUrl('/'),
+    logo: absoluteUrl('/brand/logo-1024.png'),
+    image: absoluteUrl('/og.png'),
     telephone: site.phone.e164,
     email: site.email,
     address: {

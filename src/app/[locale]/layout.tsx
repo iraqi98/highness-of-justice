@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
-import { site } from '@/config/site';
+import { absoluteUrl, site } from '@/config/site';
 import { withBase } from '@/config/base-path';
 import { fontClassName } from '@/styles/fonts';
 
@@ -26,28 +26,28 @@ export async function generateMetadata({ params }: LayoutProps<'/[locale]'>): Pr
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'meta' });
   return {
-    metadataBase: new URL(site.url),
+    metadataBase: new URL(absoluteUrl('/')),
     title: t('title'),
     description: t('description'),
     alternates: {
-      canonical: `/${locale}/`,
-      languages: { ar: '/ar/', en: '/en/', 'x-default': '/ar/' },
+      canonical: absoluteUrl(`/${locale}/`),
+      languages: { ar: absoluteUrl('/ar/'), en: absoluteUrl('/en/'), 'x-default': absoluteUrl('/ar/') },
     },
     openGraph: {
       type: 'website',
-      url: `/${locale}/`,
+      url: absoluteUrl(`/${locale}/`),
       siteName: locale === 'ar' ? site.name.ar : site.name.en,
       title: t('title'),
       description: t('description'),
       locale: locale === 'ar' ? 'ar_IQ' : 'en_US',
       alternateLocale: locale === 'ar' ? ['en_US'] : ['ar_IQ'],
-      images: [{ url: '/og.png', width: 1200, height: 630, alt: locale === 'ar' ? site.name.ar : site.name.en }],
+      images: [{ url: absoluteUrl('/og.png'), width: 1200, height: 630, alt: locale === 'ar' ? site.name.ar : site.name.en }],
     },
     twitter: {
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
-      images: ['/og.png'],
+      images: [absoluteUrl('/og.png')],
     },
     icons: {
       icon: [

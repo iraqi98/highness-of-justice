@@ -2,7 +2,13 @@
  * Single source for contact and business details (see /brand/BRAND.md §2).
  */
 export const site = {
-  url: 'https://highnessofjustice.com',
+  /**
+   * Public site URL, no trailing slash. Canonical/hreflang, sitemap, robots, Open Graph
+   * and JSON-LD all derive from it. To move to the client's new domain: set it here
+   * and add public/CNAME containing the bare domain.
+   * NOTE: highnessofjustice.com is NOT controlled by the client — never use it.
+   */
+  url: 'https://iraqi98.github.io/highness-of-justice',
   name: {
     en: 'Highness of Justice Law Firm & Legal Consultancy',
     ar: 'شركة سمو العدالة للمحاماة والاستشارات القانونية',
@@ -46,6 +52,9 @@ export const site = {
   // From the Google Business Profile. Static: update by hand when the numbers change.
   googleRating: { value: 5.0, count: 12 },
 } as const;
+
+/** Absolute public URL for a site path, e.g. absoluteUrl('/ar/'). */
+export const absoluteUrl = (path = '/') => `${site.url}${path}`;
 
 export const whatsappUrl = (text?: string) =>
   `https://wa.me/${site.whatsapp}${text ? `?text=${encodeURIComponent(text)}` : ''}`;

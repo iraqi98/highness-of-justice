@@ -33,7 +33,8 @@ Stamp registration number: **رقم التسجيل 25835** (Registration No. 258
 
 | | |
 |---|---|
-| Domain | highnessofjustice.com |
+| Website | https://iraqi98.github.io/highness-of-justice (temporary, GitHub Pages) — the client has bought a new domain, to be confirmed |
+| ⚠ Domain warning | **highnessofjustice.com is NOT controlled by the client — do not link to it.** The company profile PDFs list www.highnessofjustice.com; ignore that. |
 | Email | info@hoj.legal |
 | Phone / WhatsApp | +964 774 975 0001 (`tel:+9647749750001`, `https://wa.me/9647749750001`) |
 | Address (EN) | Baghdad – Al-Mansour, 613-32-3 |
