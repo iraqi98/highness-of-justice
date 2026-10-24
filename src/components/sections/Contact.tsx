@@ -1,9 +1,10 @@
 import Image from 'next/image';
-import { ArrowUpRight, Mail, MapPin, Phone, type LucideIcon } from 'lucide-react';
+import { Mail, MapPin, Navigation, Phone } from 'lucide-react';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { site, whatsappUrl } from '@/config/site';
 import { images } from '@/config/images';
 import { ConsultForm } from '../ConsultForm';
+import { GoogleRating } from '../GoogleRating';
 import { OfficeHours } from '../OfficeHours';
 import { WhatsAppIcon } from '../WhatsAppIcon';
 import { Container, SectionHeading } from '../ui';
@@ -30,10 +31,6 @@ export async function Contact() {
     opensAt: h.open ? formatTime(h.open, locale) : null,
   }));
 
-  const channels: { icon: LucideIcon; label: string; value: string; href: string; ltr?: boolean; external?: boolean }[] = [
-    { icon: Mail, label: t('contact.email'), value: site.email, href: `mailto:${site.email}`, ltr: true },
-    { icon: MapPin, label: t('contact.office'), value: site.address[locale], href: site.mapsUrl, external: true },
-  ];
   const action =
     'inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2';
 
@@ -41,6 +38,9 @@ export async function Contact() {
     <section id="contact" className="py-20 sm:py-28">
       <Container>
         <SectionHeading eyebrow={t('contact.eyebrow')} title={t('contact.title')} className="max-w-3xl" />
+        <div className="mt-6" data-reveal>
+          <GoogleRating />
+        </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-12 lg:gap-8">
           <div className="grid content-start gap-6 lg:col-span-6">
@@ -79,31 +79,51 @@ export async function Contact() {
                   </div>
                 </div>
               </li>
-              {channels.map(({ icon: Icon, label, value, href, ltr, external }) => (
-                <li key={label}>
-                  <a
-                    href={href}
-                    {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                    className="group flex h-full items-start gap-4 rounded-2xl border border-line bg-card p-5 transition-colors hover:border-navy/30 dark:hover:border-white/30"
-                  >
-                    <span className="grid size-11 shrink-0 place-items-center rounded-full bg-navy text-white dark:bg-white/10">
-                      <Icon aria-hidden className="size-5" />
-                    </span>
-                    <span className="min-w-0">
-                      <span className="block text-sm text-muted">{label}</span>
-                      <span dir={ltr ? 'ltr' : undefined} className="mt-1 block break-words font-semibold text-ink">
-                        {value}
-                      </span>
-                      {Icon === MapPin && (
-                        <span className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-navy-400 group-hover:underline dark:text-steel">
-                          {t('contact.map')}
-                          <ArrowUpRight aria-hidden className="size-3.5 rtl:-scale-x-100" />
-                        </span>
-                      )}
-                    </span>
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a
+                  href={`mailto:${site.email}`}
+                  className="group flex h-full items-start gap-4 rounded-2xl border border-line bg-card p-5 transition-colors hover:border-navy/30 dark:hover:border-white/30"
+                >
+                  <span className="grid size-11 shrink-0 place-items-center rounded-full bg-navy text-white dark:bg-white/10">
+                    <Mail aria-hidden className="size-5" />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-sm text-muted">{t('contact.email')}</span>
+                    <bdi dir="ltr" className="mt-1 block break-words font-semibold text-ink">
+                      {site.email}
+                    </bdi>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <div className="flex h-full items-start gap-4 rounded-2xl border border-line bg-card p-5">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-full bg-navy text-white dark:bg-white/10">
+                    <MapPin aria-hidden className="size-5" />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-sm text-muted">{t('contact.office')}</span>
+                    <a
+                      href={site.mapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1 block font-semibold text-ink hover:underline hover:underline-offset-4"
+                    >
+                      {site.address[locale]}
+                    </a>
+                    {site.social.googleMaps && (
+                      <a
+                        href={site.social.googleMaps}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-navy-400 hover:underline hover:underline-offset-4 dark:text-steel"
+                      >
+                        <Navigation aria-hidden className="size-3.5 rtl:-scale-x-100" />
+                        {t('contact.directions')}
+                      </a>
+                    )}
+                  </span>
+                </div>
+              </li>
             </ul>
 
             <div data-reveal>

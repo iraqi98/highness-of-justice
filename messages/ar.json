@@ -210,7 +210,7 @@
     "whatsapp": "واتساب",
     "email": "البريد الإلكتروني",
     "office": "المكتب",
-    "map": "افتح في خرائط Google",
+    "directions": "الاتجاهات",
     "hoursTitle": "أوقات الدوام",
     "hoursNote": "بتوقيت بغداد",
     "closed": "مغلق",
@@ -246,6 +246,18 @@
         "message": "الرسالة"
       }
     }
+  },
+  "rating": {
+    "reviews": "{count} مراجعة على Google",
+    "aria": "تقييم {value} من 5 بناءً على {count} مراجعة على Google (يفتح خرائط Google)"
+  },
+  "social": {
+    "title": "تابعنا",
+    "aria": "سمو العدالة على {network} (يفتح في نافذة جديدة)",
+    "linkedin": "لينكدإن",
+    "instagram": "إنستغرام",
+    "facebook": "فيسبوك",
+    "googleMaps": "خرائط Google"
   },
   "footer": {
     "quickLinks": "روابط سريعة",

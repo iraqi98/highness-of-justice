@@ -40,6 +40,10 @@ Stamp registration number: **رقم التسجيل 25835** (Registration No. 258
 | Address (AR) | بغداد – المنصور، 613-32-3 |
 | Coordinates | 33.323154, 44.332428 ([Google Maps](https://www.google.com/maps/search/?api=1&query=33.323154,44.332428)) |
 | Office hours | Saturday–Thursday 1:00 PM – 8:00 PM, Friday closed (Asia/Baghdad) · السبت–الخميس 1:00 م – 8:00 م، الجمعة مغلق |
+| Instagram | https://www.instagram.com/hj.legal/ |
+| Facebook | https://www.facebook.com/profile.php?id=61574734876611 |
+| LinkedIn | https://www.linkedin.com/in/highness-of-justice-legal-09bb50407/ |
+| Google Business Profile | Google Maps listing "شركة سمو العدالة للمحاماة والاستشارات القانونية" · rating 5.0 from 12 reviews (as of 2026-10-24; update `googleRating` in `src/config/site.ts` when it changes) |
 
 > The stationery mock-ups in the brand guide show older/placeholder contact details. Ignore them.
 

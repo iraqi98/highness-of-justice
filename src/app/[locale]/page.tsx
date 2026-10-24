@@ -36,6 +36,13 @@ function legalServiceJsonLd(locale: 'ar' | 'en') {
     },
     geo: { '@type': 'GeoCoordinates', latitude: site.geo.lat, longitude: site.geo.lng },
     hasMap: site.mapsUrl,
+    sameAs: Object.values(site.social).filter(Boolean),
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: site.googleRating.value.toFixed(1),
+      reviewCount: site.googleRating.count,
+      bestRating: 5,
+    },
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

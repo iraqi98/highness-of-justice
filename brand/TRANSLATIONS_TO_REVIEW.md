@@ -89,7 +89,12 @@ These labels are not in the brand material. They were written for the site in bo
 | `contact.hoursTitle` / `hoursNote` | Office hours / Baghdad time | أوقات الدوام / بتوقيت بغداد |
 | `contact.openNow` / `closedNow` / `closed` / `today` | Open now / Closed now / Closed / Today | مفتوح الآن / مغلق الآن / مغلق / اليوم |
 | `contact.opensToday` / `opensTomorrow` / `opensOn` | Opens today at 1:00 PM / Opens tomorrow at 1:00 PM / Opens Saturday at 1:00 PM | يفتح اليوم 1:00 م / يفتح غداً 1:00 م / يفتح السبت 1:00 م |
-| `contact.map` | Open in Google Maps | افتح في خرائط Google |
+| `contact.directions` | Get directions | الاتجاهات |
+| `rating.reviews` | 5.0 · 12 Google reviews | 5.0 · 12 مراجعة على Google |
+| `rating.aria` (screen readers) | Rated 5.0 out of 5 from 12 Google reviews (opens Google Maps) | تقييم 5.0 من 5 بناءً على 12 مراجعة على Google (يفتح خرائط Google) |
+| `social.title` | Follow us | تابعنا |
+| `social.aria` (screen readers) | Highness of Justice on {network} (opens in a new tab) | سمو العدالة على {network} (يفتح في نافذة جديدة) |
+| `social.*` network names | LinkedIn · Instagram · Facebook · Google Maps | لينكدإن · إنستغرام · فيسبوك · خرائط Google |
 | `contact.phoneWhatsapp` | Phone & WhatsApp | الهاتف وواتساب |
 | `contact.call` / `whatsapp` | Call / WhatsApp | اتصال / واتساب |
 | `contact.form.title` | Request a consultation | اطلب استشارة |

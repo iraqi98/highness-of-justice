@@ -210,7 +210,7 @@
     "whatsapp": "WhatsApp",
     "email": "Email",
     "office": "Office",
-    "map": "Open in Google Maps",
+    "directions": "Get directions",
     "hoursTitle": "Office hours",
     "hoursNote": "Baghdad time",
     "closed": "Closed",
@@ -246,6 +246,18 @@
         "message": "Message"
       }
     }
+  },
+  "rating": {
+    "reviews": "{count} Google reviews",
+    "aria": "Rated {value} out of 5 from {count} Google reviews (opens Google Maps)"
+  },
+  "social": {
+    "title": "Follow us",
+    "aria": "Highness of Justice on {network} (opens in a new tab)",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "googleMaps": "Google Maps"
   },
   "footer": {
     "quickLinks": "Quick links",

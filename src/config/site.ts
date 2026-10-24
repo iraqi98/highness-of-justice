@@ -34,6 +34,17 @@ export const site = {
     { day: 4, open: '13:00', close: '20:00' },
     { day: 5, open: null, close: null },
   ] as { day: number; open: string | null; close: string | null }[],
+  // Leave a URL empty ('') to hide its icon/link everywhere.
+  social: {
+    instagram: 'https://www.instagram.com/hj.legal/',
+    facebook: 'https://www.facebook.com/profile.php?id=61574734876611',
+    linkedin: 'https://www.linkedin.com/in/highness-of-justice-legal-09bb50407/',
+    // Google Business Profile listing
+    googleMaps:
+      'https://www.google.com/maps/search/?api=1&query=%D8%B4%D8%B1%D9%83%D8%A9+%D8%B3%D9%85%D9%88+%D8%A7%D9%84%D8%B9%D8%AF%D8%A7%D9%84%D8%A9+%D9%84%D9%84%D9%85%D8%AD%D8%A7%D9%85%D8%A7%D8%A9+%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A7%D8%AA+%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9',
+  } as Record<'instagram' | 'facebook' | 'linkedin' | 'googleMaps', string>,
+  // From the Google Business Profile. Static: update by hand when the numbers change.
+  googleRating: { value: 5.0, count: 12 },
 } as const;
 
 export const whatsappUrl = (text?: string) =>

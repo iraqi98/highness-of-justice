@@ -4,9 +4,17 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import { site, whatsappUrl } from '@/config/site';
 import { withBase } from '@/config/base-path';
 import { WhatsAppIcon } from './WhatsAppIcon';
+import { FacebookIcon, GoogleMapsIcon, InstagramIcon, LinkedInIcon } from './BrandIcons';
 import { Container } from './ui';
 
 const LINKS = ['about', 'practice', 'industries', 'track', 'process', 'why', 'contact'] as const;
+
+const SOCIAL = [
+  { key: 'linkedin', Icon: LinkedInIcon },
+  { key: 'instagram', Icon: InstagramIcon },
+  { key: 'facebook', Icon: FacebookIcon },
+  { key: 'googleMaps', Icon: GoogleMapsIcon },
+] as const;
 
 const heading = 'text-sm font-semibold text-white ltr:text-xs ltr:uppercase ltr:tracking-[0.18em]';
 const pill =
@@ -93,6 +101,23 @@ export async function Footer() {
               {t('contact.whatsapp')}
             </a>
           </div>
+          {/* Social profiles; an empty URL in site.ts hides its icon */}
+          <ul aria-label={t('social.title')} className="mt-4 flex flex-wrap gap-2 ps-12">
+            {SOCIAL.filter(({ key }) => site.social[key]).map(({ key, Icon }) => (
+              <li key={key}>
+                <a
+                  href={site.social[key]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t('social.aria', { network: t(`social.${key}`) })}
+                  title={t(`social.${key}`)}
+                  className="grid size-9 place-items-center rounded-full bg-white/5 text-silver ring-1 ring-white/10 transition-colors hover:bg-white hover:text-navy active:bg-white/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                >
+                  <Icon className="size-4" />
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </Container>
 

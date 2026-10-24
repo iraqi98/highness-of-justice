@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { images } from '@/config/images';
 import { withBase } from '@/config/base-path';
+import { GoogleRating } from '../GoogleRating';
 import { Container } from '../ui';
 
 export async function Hero() {
@@ -33,6 +34,7 @@ export async function Hero() {
           <p className="mt-8 max-w-2xl text-pretty text-base leading-8 text-mist/85 sm:text-lg sm:leading-9">
             {t('hero.body')}
           </p>
+          <GoogleRating tone="dark" className="mt-8" />
         </div>
 
         <div
