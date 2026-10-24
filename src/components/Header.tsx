@@ -1,0 +1,126 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
+import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
+import { ThemeToggle } from './ThemeToggle';
+import { btn } from './ui';
+
+const NAV = ['about', 'practice', 'industries', 'track', 'process', 'why', 'contact'] as const;
+
+export function Header() {
+  const t = useTranslations();
+  const locale = useLocale();
+  const other = locale === 'ar' ? 'en' : 'ar';
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [open]);
+
+  return (
+    <header
+      className={`sticky top-0 z-50 border-b transition-colors duration-300 ${
+        scrolled || open ? 'border-line bg-bg/90 backdrop-blur-md' : 'border-transparent bg-bg'
+      }`}
+    >
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-3 focus:rounded-md focus:bg-navy focus:px-4 focus:py-2 focus:text-white"
+      >
+        {t('common.skip')}
+      </a>
+      <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center gap-3 px-4 sm:px-6 lg:h-20 lg:px-8">
+        <a href="#top" className="flex min-w-0 items-center gap-3" aria-label={t('common.home')}>
+          <Image src="/brand/emblem-navy.svg" alt="" width={44} height={44} className="size-11 dark:hidden" />
+          <Image src="/brand/emblem-white.svg" alt="" width={44} height={44} className="hidden size-11 dark:block" />
+          <span className="flex min-w-0 flex-col leading-tight">
+            <span className="truncate text-[15px] font-bold text-ink ltr:tracking-wide ltr:uppercase ltr:text-[13px]">
+              {t('brand.shortName')}
+            </span>
+            <span className="truncate text-[11px] text-muted">{locale === 'ar' ? 'Highness of Justice' : 'سمو العدالة'}</span>
+          </span>
+        </a>
+
+        <nav aria-label="Primary" className="ms-auto hidden xl:block">
+          <ul className="flex items-center">
+            {NAV.map((key) => (
+              <li key={key}>
+                <a
+                  href={`#${key}`}
+                  className="whitespace-nowrap rounded-full px-2.5 py-2 text-[13px] font-medium text-muted transition-colors hover:text-ink 2xl:px-3 2xl:text-sm"
+                >
+                  {t(`nav.${key}`)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className="ms-auto flex items-center gap-1 xl:ms-2">
+          <Link
+            href="/"
+            locale={other}
+            lang={other}
+            aria-label={t('common.switchLanguageLabel')}
+            className="rounded-full px-3 py-2 text-sm font-semibold text-ink transition-colors hover:bg-soft"
+          >
+            {t('common.switchLanguage')}
+          </Link>
+          <ThemeToggle />
+          <a href="#contact" className={`${btn.base} ${btn.primary} ms-2 max-sm:hidden`}>
+            {t('common.book')}
+          </a>
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            className="grid size-10 place-items-center rounded-full text-ink hover:bg-soft xl:hidden"
+          >
+            {open ? <X className="size-5" aria-hidden /> : <Menu className="size-5" aria-hidden />}
+            <span className="sr-only">{open ? t('common.close') : t('common.menu')}</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-nav" hidden={!open} className="border-t border-line bg-bg xl:hidden">
+        <nav aria-label="Mobile" className="mx-auto max-w-7xl px-4 py-4 sm:px-6">
+          <ul className="grid gap-1">
+            {NAV.map((key) => (
+              <li key={key}>
+                <a
+                  href={`#${key}`}
+                  onClick={() => setOpen(false)}
+                  className="block rounded-lg px-3 py-3 text-base font-medium text-ink hover:bg-soft"
+                >
+                  {t(`nav.${key}`)}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href="#contact"
+            onClick={() => setOpen(false)}
+            className={`${btn.base} ${btn.primary} mt-4 w-full sm:hidden`}
+          >
+            {t('common.book')}
+          </a>
+        </nav>
+      </div>
+    </header>
+  );
+}

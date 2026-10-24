@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "title": "Highness of Justice Law Firm & Legal Consultancy | Baghdad",
+    "description": "Highness of Justice is a Baghdad law firm and legal consultancy helping local and international companies — especially foreign businesses — enter and operate in Iraq in full compliance with Iraqi law."
+  },
+  "common": {
+    "skip": "Skip to content",
+    "book": "Book a Consultation",
+    "menu": "Open menu",
+    "close": "Close menu",
+    "themeToLight": "Switch to light mode",
+    "themeToDark": "Switch to dark mode",
+    "switchLanguage": "العربية",
+    "switchLanguageLabel": "التبديل إلى العربية",
+    "whatsapp": "Chat with us on WhatsApp",
+    "home": "Highness of Justice — home"
+  },
+  "nav": {
+    "about": "About",
+    "practice": "Practice Areas",
+    "industries": "Industries",
+    "track": "Foreign Companies",
+    "process": "How We Work",
+    "why": "Why Us",
+    "contact": "Contact"
+  },
+  "brand": {
+    "name": "Highness of Justice Law Firm & Legal Consultancy",
+    "shortName": "Highness of Justice",
+    "line": "Law Firm & Legal Consultancy · Baghdad"
+  },
+  "hero": {
+    "title": "Your Trusted Legal Partner in Iraq",
+    "body": "Highness of Justice is a Baghdad law firm and legal consultancy. We help create a stable legal environment for local and international investment, with a particular focus on helping foreign companies comply with Iraqi law to the highest professional standards.",
+    "ctaPrimary": "Book a Consultation",
+    "ctaSecondary": "Explore our practice areas"
+  },
+  "about": {
+    "eyebrow": "About us",
+    "title": "A stable legal footing for doing business in Iraq.",
+    "body": "Highness of Justice Law Firm & Legal Consultancy is a specialized legal practice dedicated to providing comprehensive legal and administrative solutions to both local and international companies, with a particular focus on supporting investors and foreign businesses seeking to enter and operate within the Iraqi market in full compliance with applicable legal and regulatory frameworks.",
+    "visionEyebrow": "Our vision",
+    "vision": "To become the leading legal partner for local and international businesses in Iraq by delivering integrated legal and administrative services that contribute to strengthening the investment environment and ensuring full compliance with Iraqi laws and regulations."
+  },
+  "practice": {
+    "eyebrow": "Practice areas",
+    "title": "What we do",
+    "more": "View details",
+    "less": "Hide details",
+    "items": [
+      {
+        "title": "Company Formation & Foreign Branch Registration",
+        "points": [
+          "Establishment and registration of companies of all types under Iraqi law",
+          "Registration of foreign branches and representative offices",
+          "Preparation and follow-up of legal incorporation documents",
+          "Completion of registration procedures before the relevant authorities"
+        ]
+      },
+      {
+        "title": "Tax & Financial Legal Advisory",
+        "points": [
+          "Providing legal consultations related to Iraqi tax regulations",
+          "Monitoring companies' tax obligations",
+          "Representing companies in tax disputes and proceedings",
+          "Developing legal strategies to minimize financial and regulatory risks"
+        ]
+      },
+      {
+        "title": "Support for Foreign Companies in Iraq",
+        "points": [
+          "Legal and administrative support for foreign companies operating in Iraq",
+          "Representation before governmental and regulatory authorities",
+          "Advisory on taxation and customs regulations",
+          "Facilitating market entry and operational establishment in Iraq"
+        ]
+      },
+      {
+        "title": "Contracts & Legal Advisory",
+        "points": [
+          "Drafting, reviewing, and negotiating commercial contracts",
+          "Providing legal consultation for companies and institutions",
+          "Reviewing agreements and memoranda of understanding",
+          "Legal risk management for contracts and business transactions"
+        ]
+      },
+      {
+        "title": "Dispute Resolution & Arbitration",
+        "points": [
+          "Legal representation before Iraqi courts at all levels",
+          "Management of commercial and civil litigation",
+          "Commercial arbitration and mediation services",
+          "Protecting clients' interests throughout dispute proceedings"
+        ]
+      },
+      {
+        "title": "Labor Law & Human Resources",
+        "points": [
+          "Drafting employment contracts and internal policies",
+          "Advisory on Iraqi labor law and employment regulations",
+          "Handling social security and employment insurance matters",
+          "Representation in labor disputes and employment claims"
+        ]
+      },
+      {
+        "title": "Intellectual Property Protection",
+        "points": [
+          "Registering trademarks, patents, and copyrights",
+          "Advising on intellectual property protection strategies",
+          "Legal representation in intellectual property infringement cases"
+        ]
+      },
+      {
+        "title": "Government Relations & Business Compliance",
+        "points": [
+          "Management of governmental procedures and official transactions",
+          "Obtaining licenses, permits, and regulatory approvals",
+          "Legal advisory on governmental regulations and compliance requirements",
+          "Resolving administrative and regulatory obstacles for businesses"
+        ]
+      },
+      {
+        "title": "Advisory & Administrative Services",
+        "points": [
+          "Project planning and management support",
+          "Business development and operational improvement",
+          "Public relations and strategic business support",
+          "Accounting support and administrative auditing services"
+        ]
+      },
+      {
+        "title": "Work Visas & Foreign Personnel Support",
+        "points": [
+          "Processing work visa and residency procedures",
+          "Obtaining work permits and authorizations for foreign employees",
+          "Administrative support for expatriate staff and executives"
+        ]
+      }
+    ]
+  },
+  "industries": {
+    "eyebrow": "Sectors",
+    "title": "Industries We Serve",
+    "items": [
+      "Oil & Gas",
+      "Energy & Renewable Energy",
+      "Construction & Contracting",
+      "General Trade",
+      "Transportation & Logistics",
+      "Technology & Telecommunications",
+      "Healthcare",
+      "Tourism & Hospitality"
+    ]
+  },
+  "clients": {
+    "eyebrow": "Who we serve",
+    "title": "Four kinds of clients, one standard.",
+    "items": [
+      { "title": "Foreign companies", "body": "Entering Iraq, opening a branch or operating under Iraqi law." },
+      { "title": "Local companies", "body": "Formation, contracts, tax, labour and disputes." },
+      { "title": "Foreign nationals", "body": "Residency, work permits and personal legal matters in Iraq." },
+      { "title": "Embassies", "body": "Legal support and liaison with Iraqi authorities." }
+    ]
+  },
+  "track": {
+    "eyebrow": "For foreign companies",
+    "title": "Your legal partner for entering and operating in Iraq.",
+    "subEyebrow": "The foreign-company track",
+    "subtitle": "From registration to day-to-day compliance",
+    "steps": [
+      { "title": "Register the branch", "body": "Prepare, legalise and file the branch documents." },
+      { "title": "Tax & social security", "body": "Open the company's tax and social security files." },
+      { "title": "Residency & permits", "body": "Residency and work permits for foreign staff." },
+      { "title": "Stay compliant", "body": "Contracts, labour matters, renewals and filings." }
+    ],
+    "cta": "Start your registration"
+  },
+  "process": {
+    "eyebrow": "How we work",
+    "title": "Five steps, agreed in writing",
+    "steps": [
+      { "title": "Consultation", "body": "We listen and define the legal need." },
+      { "title": "File review", "body": "We study the documents before advising." },
+      { "title": "Proposal", "body": "Scope, timeline and fees, in writing." },
+      { "title": "Execution", "body": "Filing and follow-up with the authorities." },
+      { "title": "Handover", "body": "Final documents and ongoing support." }
+    ]
+  },
+  "why": {
+    "eyebrow": "Why Highness of Justice",
+    "title": "Why clients work with us",
+    "cards": [
+      { "title": "Based in Baghdad", "body": "Al-Mansour office, close to the ministries, registries and courts we deal with." },
+      { "title": "Arabic and English", "body": "Advice, documents and correspondence in both languages." },
+      { "title": "One firm, end to end", "body": "Formation, residency, tax, labour and litigation under one roof." },
+      { "title": "Clear terms", "body": "Scope, timeline and fees agreed in writing before work begins." }
+    ],
+    "points": [
+      "Comprehensive legal and administrative expertise",
+      "Deep understanding of Iraqi laws and investment regulations",
+      "Tailored solutions for local and foreign businesses",
+      "Efficient handling of governmental procedures and approvals",
+      "Full commitment to confidentiality, professionalism, and transparency"
+    ],
+    "valuesEyebrow": "Our commitment",
+    "values": ["Confidentiality", "Professionalism", "Transparency"]
+  },
+  "contact": {
+    "eyebrow": "Contact us",
+    "title": "Let's discuss your next step in Iraq.",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "office": "Office",
+    "map": "Open in Google Maps",
+    "hoursTitle": "Office hours",
+    "hoursNote": "Baghdad time",
+    "closed": "Closed",
+    "openNow": "Open now",
+    "closedNow": "Closed now",
+    "today": "Today",
+    "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "form": {
+      "title": "Request a consultation",
+      "intro": "Send us your details and we will continue the conversation on WhatsApp.",
+      "name": "Full name",
+      "phone": "Phone number",
+      "service": "Practice area",
+      "servicePlaceholder": "Select a practice area",
+      "other": "Other / general enquiry",
+      "message": "Message",
+      "messagePlaceholder": "Briefly describe your legal need (optional)",
+      "submit": "Continue on WhatsApp",
+      "note": "Submitting opens WhatsApp with your message pre-filled. Nothing is stored on this website.",
+      "errors": {
+        "name": "Please enter your name.",
+        "phone": "Please enter a valid phone number.",
+        "service": "Please select a practice area."
+      },
+      "wa": {
+        "greeting": "Hello Highness of Justice, I would like to request a consultation.",
+        "name": "Name",
+        "phone": "Phone",
+        "service": "Practice area",
+        "message": "Message"
+      }
+    }
+  },
+  "footer": {
+    "quickLinks": "Quick links",
+    "contact": "Contact",
+    "registration": "Registration No. {number}",
+    "rights": "© {year} Highness of Justice Law Firm & Legal Consultancy. All rights reserved.",
+    "disclaimer": "Information on this site is general and is not legal advice.",
+    "tagline": "Your Trusted Legal Partner in Iraq"
+  }
+}

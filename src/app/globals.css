@@ -1,0 +1,118 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-navy: #141641;
+  --color-navy-950: #0b0c26;
+  --color-navy-900: #10113a;
+  --color-navy-700: #26254e;
+  --color-navy-600: #36355c;
+  --color-navy-500: #49466c;
+  --color-navy-400: #5d5a7e;
+  --color-mist: #e6e7e8;
+  --color-mist-50: #f1f1f2;
+  --color-steel: #a7a9ac;
+  --color-silver: #b4b6b8;
+  --font-sans: var(--font-active), ui-sans-serif, system-ui, sans-serif;
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-soft: var(--bg-soft);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-muted: var(--ink-muted);
+  --color-line: var(--line);
+}
+
+:root {
+  --font-ar: var(--font-plex-arabic);
+  --font-en: var(--font-manrope);
+  --font-active: var(--font-ar);
+  --bg: #ffffff;
+  --bg-soft: #f1f1f2;
+  --card: #ffffff;
+  --ink: #141641;
+  --ink-muted: #55567a;
+  --line: #e6e7e8;
+  color-scheme: light;
+}
+
+html[lang='en'] {
+  --font-active: var(--font-en), var(--font-ar);
+}
+
+.dark {
+  --bg: #0b0c26;
+  --bg-soft: #10113a;
+  --card: #141641;
+  --ink: #f1f1f2;
+  --ink-muted: #a7a9ac;
+  --line: rgb(255 255 255 / 0.1);
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-feature-settings: 'kern';
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Silver accent, echoing the arc and ribbon of the logo */
+@utility silver-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b4b6b8 20%, #ffffff 50%, #b4b6b8 80%, transparent);
+}
+
+@utility silver-text {
+  background: radial-gradient(circle at 50% 40%, #ffffff 0%, #d8d8d9 55%, #b4b6b8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility silver-ring {
+  background:
+    linear-gradient(var(--ring-fill, #141641), var(--ring-fill, #141641)) padding-box,
+    linear-gradient(135deg, #ffffff, #b4b6b8 45%, #e6e7e8 70%, #b4b6b8) border-box;
+  border: 1px solid transparent;
+}
+
+/* Scroll reveal: only when JS is running and motion is welcome */
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-reveal] {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.8s var(--ease-out-soft),
+      transform 0.8s var(--ease-out-soft);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .js [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* details/summary disclosure */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}

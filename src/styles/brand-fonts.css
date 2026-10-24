@@ -1,0 +1,15 @@
+/* Brand font slots. Only downloaded when html has .brand-fonts (see fonts.ts). */
+@font-face { font-family: 'Somar'; src: url('/fonts/Somar-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Somar'; src: url('/fonts/Somar-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Somar'; src: url('/fonts/Somar-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Somar'; src: url('/fonts/Somar-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'Bahij TheSansArabic'; src: url('/fonts/BahijTheSansArabic-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Bahij TheSansArabic'; src: url('/fonts/BahijTheSansArabic-Plain.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Bahij TheSansArabic'; src: url('/fonts/BahijTheSansArabic-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Bahij TheSansArabic'; src: url('/fonts/BahijTheSansArabic-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+
+.brand-fonts {
+  --font-ar: 'Bahij TheSansArabic', var(--font-plex-arabic);
+  --font-en: 'Somar', var(--font-manrope);
+}
