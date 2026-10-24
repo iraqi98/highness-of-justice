@@ -27,6 +27,7 @@ export async function Contact() {
     day: h.day,
     label: days[h.day],
     hours: h.open && h.close ? `${formatTime(h.open, locale)} – ${formatTime(h.close, locale)}` : null,
+    opensAt: h.open ? formatTime(h.open, locale) : null,
   }));
 
   const channels: { icon: LucideIcon; label: string; value: string; href: string; ltr?: boolean; external?: boolean }[] = [

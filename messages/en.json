@@ -216,6 +216,9 @@
     "closed": "Closed",
     "openNow": "Open now",
     "closedNow": "Closed now",
+    "opensToday": "Opens today at {time}",
+    "opensTomorrow": "Opens tomorrow at {time}",
+    "opensOn": "Opens {day} at {time}",
     "today": "Today",
     "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
     "form": {

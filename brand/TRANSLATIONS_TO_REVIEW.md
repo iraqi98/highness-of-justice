@@ -88,6 +88,7 @@ These labels are not in the brand material. They were written for the site in bo
 | `why.valuesEyebrow` | Our commitment | التزامنا |
 | `contact.hoursTitle` / `hoursNote` | Office hours / Baghdad time | أوقات الدوام / بتوقيت بغداد |
 | `contact.openNow` / `closedNow` / `closed` / `today` | Open now / Closed now / Closed / Today | مفتوح الآن / مغلق الآن / مغلق / اليوم |
+| `contact.opensToday` / `opensTomorrow` / `opensOn` | Opens today at 1:00 PM / Opens tomorrow at 1:00 PM / Opens Saturday at 1:00 PM | يفتح اليوم 1:00 م / يفتح غداً 1:00 م / يفتح السبت 1:00 م |
 | `contact.map` | Open in Google Maps | افتح في خرائط Google |
 | `contact.phoneWhatsapp` | Phone & WhatsApp | الهاتف وواتساب |
 | `contact.call` / `whatsapp` | Call / WhatsApp | اتصال / واتساب |

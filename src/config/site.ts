@@ -26,12 +26,12 @@ export const site = {
   timeZone: 'Asia/Baghdad',
   // Day numbers follow Date#getDay(): 0 = Sunday … 6 = Saturday. Listed in display order.
   hours: [
-    { day: 6, open: '09:00', close: '20:00' },
-    { day: 0, open: '09:00', close: '20:00' },
-    { day: 1, open: '09:00', close: '20:00' },
-    { day: 2, open: '09:00', close: '20:00' },
-    { day: 3, open: '09:00', close: '20:00' },
-    { day: 4, open: '09:00', close: '20:00' },
+    { day: 6, open: '13:00', close: '20:00' },
+    { day: 0, open: '13:00', close: '20:00' },
+    { day: 1, open: '13:00', close: '20:00' },
+    { day: 2, open: '13:00', close: '20:00' },
+    { day: 3, open: '13:00', close: '20:00' },
+    { day: 4, open: '13:00', close: '20:00' },
     { day: 5, open: null, close: null },
   ] as { day: number; open: string | null; close: string | null }[],
 } as const;
