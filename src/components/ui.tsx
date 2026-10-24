@@ -49,7 +49,6 @@ export const btn = {
   primary:
     'bg-navy text-white hover:bg-navy-700 focus-visible:outline-navy dark:bg-white dark:text-navy dark:hover:bg-mist dark:focus-visible:outline-white',
   light: 'bg-white text-navy hover:bg-mist focus-visible:outline-white',
-  ghostLight: 'silver-ring text-white hover:[--ring-fill:#26254e] focus-visible:outline-white',
 };
 
 export const pad = (n: number) => String(n).padStart(2, '0');

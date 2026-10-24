@@ -12,7 +12,6 @@
     "themeToDark": "Switch to dark mode",
     "switchLanguage": "العربية",
     "switchLanguageLabel": "التبديل إلى العربية",
-    "whatsapp": "Chat with us on WhatsApp",
     "home": "Highness of Justice — home"
   },
   "nav": {
@@ -31,9 +30,7 @@
   },
   "hero": {
     "title": "Your Trusted Legal Partner in Iraq",
-    "body": "Highness of Justice is a Baghdad law firm and legal consultancy. We help create a stable legal environment for local and international investment, with a particular focus on helping foreign companies comply with Iraqi law to the highest professional standards.",
-    "ctaPrimary": "Book a Consultation",
-    "ctaSecondary": "Explore our practice areas"
+    "body": "Highness of Justice is a Baghdad law firm and legal consultancy. We help create a stable legal environment for local and international investment, with a particular focus on helping foreign companies comply with Iraqi law to the highest professional standards."
   },
   "about": {
     "eyebrow": "About us",

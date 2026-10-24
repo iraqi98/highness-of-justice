@@ -1,9 +1,8 @@
 import Image from 'next/image';
-import { ArrowDown } from 'lucide-react';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { images } from '@/config/images';
 import { withBase } from '@/config/base-path';
-import { Container, btn } from '../ui';
+import { Container } from '../ui';
 
 export async function Hero() {
   const t = await getTranslations();
@@ -34,15 +33,6 @@ export async function Hero() {
           <p className="mt-8 max-w-2xl text-pretty text-base leading-8 text-mist/85 sm:text-lg sm:leading-9">
             {t('hero.body')}
           </p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <a href="#contact" className={`${btn.base} ${btn.light} px-7 py-3.5`}>
-              {t('hero.ctaPrimary')}
-            </a>
-            <a href="#practice" className={`${btn.base} ${btn.ghostLight} px-7 py-3.5`}>
-              {t('hero.ctaSecondary')}
-              <ArrowDown aria-hidden className="size-4" />
-            </a>
-          </div>
         </div>
 
         <div

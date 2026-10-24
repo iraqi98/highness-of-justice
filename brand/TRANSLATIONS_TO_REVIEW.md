@@ -80,8 +80,7 @@ These labels are not in the brand material. They were written for the site in bo
 | Key | English | Arabic |
 |---|---|---|
 | `nav.*` | About · Practice Areas · Industries · Foreign Companies · How We Work · Why Us · Contact | من نحن · مجالات الممارسة · القطاعات · الشركات الأجنبية · آلية العمل · لماذا نحن · تواصل معنا |
-| `common.book` / `hero.ctaPrimary` | Book a Consultation | احجز استشارة |
-| `hero.ctaSecondary` | Explore our practice areas | استعرض مجالات الممارسة |
+| `common.book` | Book a Consultation | احجز استشارة |
 | `practice.title` | What we do | خدماتنا |
 | `practice.more` / `less` | View details / Hide details | عرض التفاصيل / إخفاء التفاصيل |
 | `industries.eyebrow` | Sectors | القطاعات |
