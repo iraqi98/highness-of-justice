@@ -37,6 +37,31 @@ export const images = {
     src: unsplash('1497366811353-6870744d04b2'),
     alt: { en: 'Bright modern office meeting room', ar: 'قاعة اجتماعات حديثة ومضيئة في مكتب' },
   },
+  // Service pages
+  taxDocuments: {
+    src: unsplash('1554224155-6726b3ff858f'),
+    alt: { en: 'Tax forms, receipts and a calculator on a desk', ar: 'نماذج ضريبية وإيصالات وآلة حاسبة على مكتب' },
+  },
+  gavel: {
+    src: unsplash('1575505586569-646b2ca898fc'),
+    alt: { en: "Close-up of a judge's wooden gavel", ar: 'لقطة قريبة لمطرقة قاضٍ خشبية' },
+  },
+  employmentContract: {
+    src: unsplash('1521791055366-0d553872125f'),
+    alt: { en: 'A hand signing a printed contract', ar: 'يد توقّع عقداً مطبوعاً' },
+  },
+  ideasSession: {
+    src: unsplash('1532619675605-1ede6c2ed2b0'),
+    alt: { en: 'Two colleagues planning ideas on a whiteboard', ar: 'زميلان يخططان لأفكار على لوح أبيض' },
+  },
+  advisoryDesk: {
+    src: unsplash('1454165804606-c3d57bc86b40'),
+    alt: { en: 'Professionals reviewing documents at a desk with laptops', ar: 'مختصون يراجعون مستندات على مكتب مع حواسيب محمولة' },
+  },
+  executive: {
+    src: unsplash('1507679799987-c73779587ccf'),
+    alt: { en: 'Executive in a dark suit buttoning his jacket', ar: 'مدير ببدلة داكنة يغلق سترته' },
+  },
   // Industries
   oilGas: {
     src: unsplash('1726731782158-fcf6822b6ca4', 800),

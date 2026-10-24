@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Mail, MapPin, Navigation, Phone } from 'lucide-react';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { site, whatsappUrl } from '@/config/site';
+import { services as serviceConfig } from '@/config/services';
 import { images } from '@/config/images';
 import { ConsultForm } from '../ConsultForm';
 import { GoogleRating } from '../GoogleRating';
@@ -22,7 +23,7 @@ export async function Contact() {
   const t = await getTranslations();
   const locale = (await getLocale()) as 'ar' | 'en';
   const days = t.raw('contact.days') as string[];
-  const services = (t.raw('practice.items') as { title: string }[]).map((s) => s.title);
+  const services = (t.raw('practice.items') as { title: string }[]).map((s, i) => ({ slug: serviceConfig[i].slug, title: s.title }));
 
   const rows = site.hours.map((h) => ({
     day: h.day,

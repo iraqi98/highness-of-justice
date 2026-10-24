@@ -1,5 +1,7 @@
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { absoluteUrl, site } from '@/config/site';
+import { services } from '@/config/services';
+import { servicePage } from '@/lib/links';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { RevealObserver } from '@/components/RevealObserver';
@@ -16,7 +18,7 @@ import { Contact } from '@/components/sections/Contact';
 
 const DAY_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-function legalServiceJsonLd(locale: 'ar' | 'en') {
+function legalServiceJsonLd(locale: 'ar' | 'en', serviceTitles: string[]) {
   const open = site.hours.filter((h) => h.open && h.close);
   return {
     '@context': 'https://schema.org',
@@ -53,6 +55,14 @@ function legalServiceJsonLd(locale: 'ar' | 'en') {
       },
     ],
     areaServed: { '@type': 'Country', name: 'Iraq' },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: locale === 'ar' ? 'مجالات الممارسة' : 'Practice areas',
+      itemListElement: services.map(({ slug }, i) => ({
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: serviceTitles[i], url: absoluteUrl(`/${locale}/${servicePage(slug)}`) },
+      })),
+    },
     availableLanguage: ['ar', 'en'],
     inLanguage: locale,
   };
@@ -61,7 +71,9 @@ function legalServiceJsonLd(locale: 'ar' | 'en') {
 export default async function HomePage({ params }: PageProps<'/[locale]'>) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const jsonLd = legalServiceJsonLd(locale as 'ar' | 'en');
+  const t = await getTranslations();
+  const titles = (t.raw('practice.items') as { title: string }[]).map((s) => s.title);
+  const jsonLd = legalServiceJsonLd(locale as 'ar' | 'en', titles);
 
   return (
     <>

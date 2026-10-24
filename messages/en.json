@@ -44,6 +44,7 @@
     "title": "What we do",
     "more": "View details",
     "less": "Hide details",
+    "learnMore": "Learn more",
     "items": [
       {
         "title": "Company Formation & Foreign Branch Registration",
@@ -345,8 +346,57 @@
       "body": "Book a consultation, or message us on WhatsApp to tell us about your plans."
     }
   },
+  "svc": {
+    "meta": {
+      "title": "{service} Lawyer in Baghdad | Highness of Justice",
+      "description": "{intro} Highness of Justice Law Firm & Legal Consultancy, Baghdad."
+    },
+    "breadcrumb": "Practice areas",
+    "eyebrow": "Practice area",
+    "intros": [
+      "Registering new local companies and branches of foreign companies under Iraqi law.",
+      "Tax registration, filings and clearances, with legal advice on Iraqi tax regulations.",
+      "Legal and administrative support for foreign companies entering and operating in Iraq.",
+      "Drafting, review and negotiation of commercial contracts and agreements.",
+      "Representation before Iraqi courts, with commercial arbitration and mediation.",
+      "Employment and social security compliance, from employment contracts to labour disputes.",
+      "Registration and protection of trademarks, patents and copyrights.",
+      "Governmental procedures, licences and approvals, handled for your business.",
+      "Project, business development and administrative support alongside legal advice.",
+      "Residency and work permits for foreign staff, and administrative support for expatriates."
+    ],
+    "handle": {
+      "eyebrow": "Scope",
+      "title": "What we handle"
+    },
+    "audience": {
+      "eyebrow": "Clients",
+      "title": "Who it's for"
+    },
+    "foreign": {
+      "title": "A foreign company?",
+      "body": "This service is part of our foreign-company track — from registration to day-to-day compliance.",
+      "link": "See the foreign-company track"
+    },
+    "process": {
+      "title": "How we work"
+    },
+    "related": {
+      "eyebrow": "Related",
+      "title": "Related practice areas",
+      "link": "Learn more"
+    },
+    "cta": {
+      "title": "Discuss {service} with us",
+      "body": "Book a consultation, or message us on WhatsApp.",
+      "book": "Book a consultation",
+      "whatsapp": "Message us on WhatsApp",
+      "waMessage": "Hello Highness of Justice, I would like a consultation about: {service}."
+    }
+  },
   "footer": {
     "quickLinks": "Quick links",
+    "practiceAreas": "Practice areas",
     "contact": "Contact",
     "registration": "Registration No.",
     "rights": "© {year} Highness of Justice Law Firm & Legal Consultancy.",

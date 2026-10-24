@@ -1,9 +1,10 @@
 import Image from 'next/image';
-import { Mail, MapPin, Phone, type LucideIcon } from 'lucide-react';
+import { ChevronDown, Mail, MapPin, Phone, type LucideIcon } from 'lucide-react';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { site, whatsappUrl } from '@/config/site';
 import { withBase } from '@/config/base-path';
-import { FOREIGN_COMPANIES, pageHref } from '@/lib/links';
+import { FOREIGN_COMPANIES, pageHref, servicePage } from '@/lib/links';
+import { services } from '@/config/services';
 import { WhatsAppIcon } from './WhatsAppIcon';
 import { FacebookIcon, GoogleMapsIcon, InstagramIcon, LinkedInIcon } from './BrandIcons';
 import { Container } from './ui';
@@ -17,13 +18,28 @@ const SOCIAL = [
   { key: 'googleMaps', Icon: GoogleMapsIcon },
 ] as const;
 
+const practiceLink =
+  'block rounded-lg px-2 py-1.5 text-sm leading-5 text-mist/75 transition-colors hover:bg-white/5 hover:text-white active:bg-white/10';
 const heading = 'text-sm font-semibold text-white ltr:text-xs ltr:uppercase ltr:tracking-[0.18em]';
 const pill =
   'inline-flex items-center gap-1.5 rounded-full border border-white/15 px-3.5 py-1.5 text-xs font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-navy active:bg-white/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white';
 
+/** Stops line breaks inside numbers like 613-32-3 (browsers may break after a hyphen). */
+const keepNumbersTogether = (text: string) =>
+  text.split(/(\d[\d-]*\d)/).map((part, i) =>
+    i % 2 ? (
+      <span key={i} className="whitespace-nowrap">
+        {part}
+      </span>
+    ) : (
+      part
+    ),
+  );
+
 export async function Footer() {
   const t = await getTranslations();
   const locale = (await getLocale()) as 'ar' | 'en';
+  const practice = (t.raw('practice.items') as { title: string }[]).map((p) => p.title);
 
   const contacts: { icon: LucideIcon; href: string; label: string; ltr?: boolean; external?: boolean }[] = [
     { icon: MapPin, href: site.mapsUrl, label: site.address[locale], external: true },
@@ -37,7 +53,7 @@ export async function Footer() {
 
       <Container className="grid gap-8 py-9 sm:gap-10 sm:py-14 lg:grid-cols-12 lg:gap-12 lg:py-16">
         {/* Brand */}
-        <div className="flex flex-col items-center text-center lg:col-span-5 lg:items-start lg:text-start">
+        <div className="flex flex-col items-center text-center lg:col-span-3 lg:items-start lg:text-start">
           <Image
             src={withBase('/brand/logo-white.svg')}
             alt={locale === 'ar' ? site.name.ar : site.name.en}
@@ -57,7 +73,7 @@ export async function Footer() {
         </div>
 
         {/* Quick links: 2-column grid on mobile, a single column from lg */}
-        <nav aria-label={t('footer.quickLinks')} className="lg:col-span-3">
+        <nav aria-label={t('footer.quickLinks')} className="lg:col-span-2">
           <h2 className={heading}>{t('footer.quickLinks')}</h2>
           <ul className="-mx-2 mt-3 grid grid-cols-2 gap-x-4 lg:mt-4 lg:grid-cols-1">
             {LINKS.map((k) => (
@@ -73,8 +89,39 @@ export async function Footer() {
           </ul>
         </nav>
 
+        {/* Practice areas: collapsible on mobile, a column from lg */}
+        <nav aria-label={t('footer.practiceAreas')} className="lg:col-span-4">
+          <details className="group border-y border-white/10 lg:hidden">
+            <summary className="flex cursor-pointer items-center justify-between py-3">
+              <h2 className={heading}>{t('footer.practiceAreas')}</h2>
+              <ChevronDown aria-hidden className="size-4 text-mist/60 transition-transform group-open:rotate-180 motion-reduce:transition-none" />
+            </summary>
+            <ul className="-mx-2 grid gap-0.5 pb-3">
+              {practice.map((title, i) => (
+                <li key={services[i].slug}>
+                  <a href={pageHref(locale, servicePage(services[i].slug))} className={practiceLink}>
+                    {title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
+          <div className="hidden lg:block">
+            <h2 className={heading}>{t('footer.practiceAreas')}</h2>
+            <ul className="-mx-2 mt-4 grid gap-0.5">
+              {practice.map((title, i) => (
+                <li key={services[i].slug}>
+                  <a href={pageHref(locale, servicePage(services[i].slug))} className={practiceLink}>
+                    {title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+
         {/* Contact */}
-        <div className="lg:col-span-4">
+        <div className="lg:col-span-3">
           <h2 className={heading}>{t('footer.contact')}</h2>
           <ul className="-mx-2 mt-3 grid gap-1 lg:mt-4">
             {contacts.map(({ icon: Icon, href, label, ltr, external }) => (
@@ -87,7 +134,7 @@ export async function Footer() {
                   <span className="grid size-9 shrink-0 place-items-center rounded-full bg-white/5 text-silver ring-1 ring-white/10 transition-colors group-hover:bg-white/10 group-hover:text-white">
                     <Icon aria-hidden className="size-4" strokeWidth={1.75} />
                   </span>
-                  {ltr ? <bdi dir="ltr">{label}</bdi> : <span>{label}</span>}
+                  {ltr ? <bdi dir="ltr">{label}</bdi> : <span>{keepNumbersTogether(label)}</span>}
                 </a>
               </li>
             ))}

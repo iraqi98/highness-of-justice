@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { useTranslations } from 'next-intl';
 import { whatsappUrl } from '@/config/site';
 import { WhatsAppIcon } from './WhatsAppIcon';
@@ -23,9 +23,17 @@ function validPhone(raw: string) {
 const field =
   'mt-2 block w-full rounded-xl border bg-bg px-4 py-3 text-[15px] text-ink placeholder:text-muted/70 transition-colors focus:outline-none focus:ring-2 focus:ring-navy/20 dark:focus:ring-white/20';
 
-export function ConsultForm({ services }: { services: string[] }) {
+export function ConsultForm({ services }: { services: { slug: string; title: string }[] }) {
   const t = useTranslations('contact.form');
   const [errors, setErrors] = useState<Errors>({});
+  const serviceRef = useRef<HTMLSelectElement>(null);
+
+  // Preselect the practice area when arriving from a service page (/?service=<slug>#contact)
+  useEffect(() => {
+    const slug = new URLSearchParams(window.location.search).get('service');
+    const match = slug && services.find((s) => s.slug === slug);
+    if (match && serviceRef.current) serviceRef.current.value = match.title;
+  }, [services]);
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -106,6 +114,7 @@ export function ConsultForm({ services }: { services: string[] }) {
           {t('service')} <span aria-hidden className="text-steel">*</span>
         </label>
         <select
+          ref={serviceRef}
           id="service"
           name="service"
           required
@@ -122,8 +131,8 @@ export function ConsultForm({ services }: { services: string[] }) {
             {t('servicePlaceholder')}
           </option>
           {services.map((s) => (
-            <option key={s} value={s}>
-              {s}
+            <option key={s.slug} value={s.title}>
+              {s.title}
             </option>
           ))}
           <option value={t('other')}>{t('other')}</option>

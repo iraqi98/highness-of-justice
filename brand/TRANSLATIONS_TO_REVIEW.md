@@ -162,3 +162,60 @@ Page: `/en/foreign-companies/` and `/ar/foreign-companies/`. All content was ass
 | `fc.faq.eyebrow / title / note` | FAQ — Questions foreign companies ask us — Information on this page is general and is not legal advice. | الأسئلة الشائعة — أسئلة تطرحها علينا الشركات الأجنبية — المعلومات الواردة في هذه الصفحة عامة ولا تُعد استشارة قانونية. |
 | `fc.cta` | Let's discuss your next step in Iraq. Book a consultation, or message us on WhatsApp to tell us about your plans. | لنناقش خطوتك التالية في العراق. احجز استشارة، أو راسلنا عبر واتساب لتخبرنا عن خططك. |
 | `track.more (home page)` | Learn more for foreign companies | المزيد للشركات الأجنبية |
+
+---
+
+## Service pages — needs client legal review
+
+Pages: `/en/services/<slug>/` and `/ar/services/<slug>/` for all 10 practice areas. The bullet lists (“What we handle”) are word-for-word from BRAND.md §7.3, and “Who it's for” reuses the four client types from §7.5. The items below were written or combined for these pages and need confirmation.
+
+### Service introductions (hero text and search-result description)
+
+| # | Slug | English | Arabic | Built from (BRAND.md) |
+|---|---|---|---|---|
+| 01 | `company-formation` | Registering new local companies and branches of foreign companies under Iraqi law. | تأسيس وتسجيل الشركات المحلية وفروع الشركات الأجنبية وفق القوانين العراقية. | §7.4 'Company formation: Registering new local companies.' + 'Foreign branches: Registering branches of foreign companies.' + service 01 |
+| 02 | `tax-advisory` | Tax registration, filings and clearances, with legal advice on Iraqi tax regulations. | التسجيل الضريبي والإقرارات وبراءات الذمة، مع الاستشارات القانونية المتعلقة بالضرائب العراقية. | §7.4 'Tax: Tax registration, filings and clearances.' + service 02 bullet 1 |
+| 03 | `foreign-company-support` | Legal and administrative support for foreign companies entering and operating in Iraq. | الدعم القانوني والإداري للشركات الأجنبية لدخول السوق العراقي والعمل فيه. | Service 03 bullets 1 and 4 |
+| 04 | `contracts` | Drafting, review and negotiation of commercial contracts and agreements. | إعداد وصياغة ومراجعة العقود التجارية والاتفاقيات والتفاوض بشأنها. | §7.4 'Contracts: Drafting, review and negotiation.' + service 04 |
+| 05 | `dispute-resolution` | Representation before Iraqi courts, with commercial arbitration and mediation. | التمثيل أمام المحاكم العراقية، وخدمات التحكيم والوساطة التجارية. | §7.4 'Litigation: Representation before Iraqi courts.' + service 05 bullet 3 |
+| 06 | `labor-law` | Employment and social security compliance, from employment contracts to labour disputes. | الامتثال لقوانين العمل والضمان الاجتماعي، من عقود العمل إلى النزاعات العمالية. | §7.4 'Labour & social security: Employment and social security compliance.' + service 06 |
+| 07 | `intellectual-property` | Registration and protection of trademarks, patents and copyrights. | تسجيل وحماية العلامات التجارية وبراءات الاختراع وحقوق التأليف والنشر. | Service 07 bullet 1 |
+| 08 | `government-relations` | Governmental procedures, licences and approvals, handled for your business. | متابعة المعاملات الحكومية والتراخيص والموافقات الرسمية لأعمالك. | Service 08 bullets 1–2 |
+| 09 | `advisory-services` | Project, business development and administrative support alongside legal advice. | دعم المشاريع وتطوير الأعمال والخدمات الإدارية إلى جانب المشورة القانونية. | Service 09 bullets |
+| 10 | `work-visas` | Residency and work permits for foreign staff, and administrative support for expatriates. | الإقامة وتصاريح العمل للموظفين الأجانب، والدعم الإداري للكوادر الأجنبية. | §7.4 'Foreign residency: Residency and work permits for foreign staff.' + service 10 bullet 3 |
+
+Note: “clearances” in the tax intro (from the company deck) is translated as «براءات الذمة». Please confirm that is the intended meaning.
+
+### Client types shown on each page, and the foreign-companies link
+
+Matched from the client-type descriptions in §7.5. Intellectual property and advisory services have no explicit client type in BRAND.md; companies (foreign and local) were assumed.
+
+| Slug | Who it's for | Links to the foreign-companies page |
+|---|---|---|
+| `company-formation` | Foreign companies, Local companies | Yes |
+| `tax-advisory` | Foreign companies, Local companies | Yes |
+| `foreign-company-support` | Foreign companies, Embassies | Yes |
+| `contracts` | Foreign companies, Local companies | Yes |
+| `dispute-resolution` | Foreign companies, Local companies | No |
+| `labor-law` | Foreign companies, Local companies | Yes |
+| `intellectual-property` | Foreign companies, Local companies | No |
+| `government-relations` | Foreign companies, Local companies, Embassies | Yes |
+| `advisory-services` | Foreign companies, Local companies | No |
+| `work-visas` | Foreign companies, Foreign nationals | Yes |
+
+### New wording on the service pages
+
+| Key | English | Arabic |
+|---|---|---|
+| `svc.meta.title` | {service} Lawyer in Baghdad | Highness of Justice | محامي {service} في بغداد | شركة سمو العدالة |
+| `svc.meta.description` | {intro} Highness of Justice Law Firm & Legal Consultancy, Baghdad. | {intro} شركة سمو العدالة للمحاماة والاستشارات القانونية، بغداد. |
+| `svc.breadcrumb` / `eyebrow` | Practice areas / Practice area | مجالات الممارسة / مجال الممارسة |
+| `svc.handle` | Scope — What we handle | النطاق — ما نتولاه |
+| `svc.audience` | Clients — Who it's for | العملاء — لمن هذه الخدمة |
+| `svc.foreign` | A foreign company? This service is part of our foreign-company track — from registration to day-to-day compliance. — See the foreign-company track | هل أنتم شركة أجنبية؟ هذه الخدمة جزء من مسار الشركات الأجنبية لدينا — من التسجيل إلى الامتثال اليومي. — تعرّف على مسار الشركات الأجنبية |
+| `svc.related` | Related — Related practice areas — Learn more | ذات صلة — مجالات ممارسة ذات صلة — اقرأ المزيد |
+| `svc.cta.title` / `body` | Discuss {service} with us — Book a consultation, or message us on WhatsApp. | ناقش معنا {service} — احجز استشارة، أو راسلنا عبر واتساب. |
+| `svc.cta.book` / `whatsapp` | Book a consultation / Message us on WhatsApp | احجز استشارة / راسلنا عبر واتساب |
+| `svc.cta.waMessage` | Hello Highness of Justice, I would like a consultation about: {service}. | مرحباً سمو العدالة، أود طلب استشارة بخصوص: {service}. |
+| `practice.learnMore` (home cards) | Learn more | اقرأ المزيد |
+| `footer.practiceAreas` | Practice areas | مجالات الممارسة |

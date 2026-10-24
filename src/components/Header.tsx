@@ -22,7 +22,8 @@ export function Header({ page = '' }: { page?: PagePath }) {
 
   const navHref = (key: (typeof NAV)[number]) =>
     key === 'track' ? pageHref(locale, FOREIGN_COMPANIES) : pageHref(locale, '', key);
-  const isCurrent = (key: (typeof NAV)[number]) => key === 'track' && page === FOREIGN_COMPANIES;
+  const isCurrent = (key: (typeof NAV)[number]) =>
+    (key === 'track' && page === FOREIGN_COMPANIES) || (key === 'practice' && page.startsWith('services/'));
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
