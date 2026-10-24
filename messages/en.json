@@ -208,7 +208,8 @@
   "contact": {
     "eyebrow": "Contact us",
     "title": "Let's discuss your next step in Iraq.",
-    "phone": "Phone",
+    "phoneWhatsapp": "Phone & WhatsApp",
+    "call": "Call",
     "whatsapp": "WhatsApp",
     "email": "Email",
     "office": "Office",

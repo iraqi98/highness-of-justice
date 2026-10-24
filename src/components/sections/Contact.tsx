@@ -29,12 +29,12 @@ export async function Contact() {
     hours: h.open && h.close ? `${formatTime(h.open, locale)} – ${formatTime(h.close, locale)}` : null,
   }));
 
-  const channels: { icon: LucideIcon | typeof WhatsAppIcon; label: string; value: string; href: string; ltr?: boolean; external?: boolean }[] = [
-    { icon: Phone, label: t('contact.phone'), value: site.phone.display, href: `tel:${site.phone.e164}`, ltr: true },
-    { icon: WhatsAppIcon, label: t('contact.whatsapp'), value: site.phone.display, href: whatsappUrl(), ltr: true, external: true },
+  const channels: { icon: LucideIcon; label: string; value: string; href: string; ltr?: boolean; external?: boolean }[] = [
     { icon: Mail, label: t('contact.email'), value: site.email, href: `mailto:${site.email}`, ltr: true },
     { icon: MapPin, label: t('contact.office'), value: site.address[locale], href: site.mapsUrl, external: true },
   ];
+  const action =
+    'inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2';
 
   return (
     <section id="contact" className="py-20 sm:py-28">
@@ -44,6 +44,40 @@ export async function Contact() {
         <div className="mt-12 grid gap-6 lg:grid-cols-12 lg:gap-8">
           <div className="grid content-start gap-6 lg:col-span-6">
             <ul className="grid gap-3 sm:grid-cols-2" data-reveal>
+              {/* One number for calls and WhatsApp: shown once, with two actions */}
+              <li className="sm:col-span-2">
+                <div className="flex flex-col gap-4 rounded-2xl border border-line bg-card p-5 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex items-start gap-4">
+                    <span className="grid size-11 shrink-0 place-items-center rounded-full bg-navy text-white dark:bg-white/10">
+                      <Phone aria-hidden className="size-5" />
+                    </span>
+                    <span>
+                      <span className="block text-sm text-muted">{t('contact.phoneWhatsapp')}</span>
+                      <span dir="ltr" className="mt-1 block text-lg font-semibold text-ink">
+                        {site.phone.display}
+                      </span>
+                    </span>
+                  </div>
+                  <div className="flex gap-2 ps-15 sm:ps-0">
+                    <a
+                      href={`tel:${site.phone.e164}`}
+                      className={`${action} bg-navy text-white hover:bg-navy-700 focus-visible:outline-navy dark:bg-white dark:text-navy dark:hover:bg-mist`}
+                    >
+                      <Phone aria-hidden className="size-4" />
+                      {t('contact.call')}
+                    </a>
+                    <a
+                      href={whatsappUrl()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${action} border border-line text-ink hover:border-navy/40 focus-visible:outline-navy dark:hover:border-white/40`}
+                    >
+                      <WhatsAppIcon className="size-4" />
+                      {t('contact.whatsapp')}
+                    </a>
+                  </div>
+                </div>
+              </li>
               {channels.map(({ icon: Icon, label, value, href, ltr, external }) => (
                 <li key={label}>
                   <a

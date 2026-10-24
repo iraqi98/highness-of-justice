@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
 import { ThemeToggle } from './ThemeToggle';
 import { btn } from './ui';
 
@@ -45,10 +44,10 @@ export function Header() {
       </a>
       <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center gap-3 px-4 sm:px-6 lg:h-20 lg:px-8">
         <a href="#top" className="flex min-w-0 items-center gap-3" aria-label={t('common.home')}>
-          <Image src="/brand/emblem-navy.svg" alt="" width={44} height={44} className="size-11 dark:hidden" />
-          <Image src="/brand/emblem-white.svg" alt="" width={44} height={44} className="hidden size-11 dark:block" />
+          <Image src="/brand/emblem-navy.svg" alt="" width={44} height={44} loading="eager" className="size-11 dark:hidden" />
+          <Image src="/brand/emblem-white.svg" alt="" width={44} height={44} loading="eager" className="hidden size-11 dark:block" />
           <span className="flex min-w-0 flex-col leading-tight">
-            <span className="truncate text-[15px] font-bold text-ink ltr:tracking-wide ltr:uppercase ltr:text-[13px]">
+            <span className="truncate text-[15px] font-bold text-ink ltr:text-[12px] ltr:uppercase sm:ltr:text-[13px] sm:ltr:tracking-wide">
               {t('brand.shortName')}
             </span>
             <span className="truncate text-[11px] text-muted">{locale === 'ar' ? 'Highness of Justice' : 'سمو العدالة'}</span>
@@ -71,15 +70,16 @@ export function Header() {
         </nav>
 
         <div className="ms-auto flex items-center gap-1 xl:ms-2">
-          <Link
-            href="/"
-            locale={other}
+          {/* Plain <a>: switching locale swaps <html lang/dir>, fonts and metadata, so load a fresh document */}
+          <a
+            href={`/${other}`}
+            hrefLang={other}
             lang={other}
             aria-label={t('common.switchLanguageLabel')}
             className="rounded-full px-3 py-2 text-sm font-semibold text-ink transition-colors hover:bg-soft"
           >
             {t('common.switchLanguage')}
-          </Link>
+          </a>
           <ThemeToggle />
           <a href="#contact" className={`${btn.base} ${btn.primary} ms-2 max-sm:hidden`}>
             {t('common.book')}

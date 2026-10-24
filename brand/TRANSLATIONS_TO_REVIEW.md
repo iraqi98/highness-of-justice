@@ -90,6 +90,8 @@ These labels are not in the brand material. They were written for the site in bo
 | `contact.hoursTitle` / `hoursNote` | Office hours / Baghdad time | أوقات الدوام / بتوقيت بغداد |
 | `contact.openNow` / `closedNow` / `closed` / `today` | Open now / Closed now / Closed / Today | مفتوح الآن / مغلق الآن / مغلق / اليوم |
 | `contact.map` | Open in Google Maps | افتح في خرائط Google |
+| `contact.phoneWhatsapp` | Phone & WhatsApp | الهاتف وواتساب |
+| `contact.call` / `whatsapp` | Call / WhatsApp | اتصال / واتساب |
 | `contact.form.title` | Request a consultation | اطلب استشارة |
 | `contact.form.intro` | Send us your details and we will continue the conversation on WhatsApp. | أرسل لنا بياناتك وسنكمل التواصل معك عبر واتساب. |
 | `contact.form.name` / `phone` / `service` / `message` | Full name / Phone number / Practice area / Message | الاسم الكامل / رقم الهاتف / مجال الخدمة / الرسالة |

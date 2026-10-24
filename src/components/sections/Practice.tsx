@@ -45,21 +45,21 @@ export async function Practice() {
           </div>
         </div>
 
-        <ul className="grid content-start gap-4 sm:grid-cols-2 lg:col-span-8">
+        <ul className="grid content-start items-start gap-4 sm:grid-cols-2 lg:col-span-8">
           {items.map((item, i) => {
             const Icon = ICONS[i];
             return (
               <li key={item.title} data-reveal style={{ ['--reveal-delay' as string]: `${(i % 2) * 80}ms` }}>
-                <details className="group h-full rounded-2xl border border-line bg-card transition-shadow duration-300 hover:shadow-lg hover:shadow-navy/5 open:shadow-xl open:shadow-navy/5">
-                  <summary className="flex h-full cursor-pointer flex-col gap-6 rounded-2xl p-6 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy sm:p-7 dark:focus-visible:outline-white">
+                <details className="group rounded-2xl border border-line bg-card transition-shadow duration-300 hover:shadow-lg hover:shadow-navy/5 open:shadow-xl open:shadow-navy/5">
+                  <summary className="flex cursor-pointer flex-col gap-6 rounded-2xl p-6 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy sm:p-7 dark:focus-visible:outline-white">
                     <span className="flex items-center justify-between">
                       <span className="grid size-12 place-items-center rounded-full bg-navy text-white dark:bg-white/10">
                         <Icon aria-hidden className="size-5" strokeWidth={1.6} />
                       </span>
                       <span className="text-sm font-semibold tabular-nums text-steel">{pad(i + 1)}</span>
                     </span>
-                    <span className="text-lg font-semibold leading-snug text-ink">{item.title}</span>
-                    <span className="mt-auto flex items-center gap-2 text-sm font-medium text-navy-400 dark:text-steel">
+                    <span className="min-h-[2lh] text-lg font-semibold leading-snug text-ink">{item.title}</span>
+                    <span className="flex items-center gap-2 text-sm font-medium text-navy-400 dark:text-steel">
                       <Plus
                         aria-hidden
                         className="size-4 transition-transform duration-300 group-open:rotate-45 motion-reduce:transition-none"

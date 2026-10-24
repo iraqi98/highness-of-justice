@@ -17,6 +17,7 @@ export async function Hero() {
         width={900}
         height={900}
         aria-hidden
+        loading="eager"
         className="pointer-events-none absolute -bottom-40 -start-40 -z-10 w-[42rem] max-w-none opacity-[0.04]"
       />
       <Container className="grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-12 lg:gap-10 lg:py-28">
