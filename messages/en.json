@@ -250,8 +250,9 @@
   "footer": {
     "quickLinks": "Quick links",
     "contact": "Contact",
-    "registration": "Registration No. {number}",
-    "rights": "© {year} Highness of Justice Law Firm & Legal Consultancy. All rights reserved.",
+    "registration": "Registration No.",
+    "rights": "© {year} Highness of Justice Law Firm & Legal Consultancy.",
+    "reserved": "All rights reserved.",
     "disclaimer": "Information on this site is general and is not legal advice.",
     "tagline": "Your Trusted Legal Partner in Iraq"
   }

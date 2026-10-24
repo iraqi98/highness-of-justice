@@ -104,7 +104,7 @@ These labels are not in the brand material. They were written for the site in bo
 | `contact.form.wa.greeting` | Hello Highness of Justice, I would like to request a consultation. | مرحباً سمو العدالة، أود طلب استشارة قانونية. |
 | `footer.quickLinks` / `contact` | Quick links / Contact | روابط سريعة / التواصل |
 | `footer.registration` | Registration No. 25835 | رقم التسجيل 25835 |
-| `footer.rights` | © 2026 Highness of Justice Law Firm & Legal Consultancy. All rights reserved. | © 2026 شركة سمو العدالة للمحاماة والاستشارات القانونية. جميع الحقوق محفوظة. |
+| `footer.rights` + `footer.reserved` | © 2026 Highness of Justice Law Firm & Legal Consultancy. · All rights reserved. | © 2026 شركة سمو العدالة للمحاماة والاستشارات القانونية. · جميع الحقوق محفوظة. |
 | `footer.disclaimer` | Information on this site is general and is not legal advice. | المعلومات الواردة في هذا الموقع عامة ولا تُعد استشارة قانونية. |
 | `meta.description` | (SEO description, condensed from the About text) | (وصف محركات البحث، مختصر من نص «من نحن») |
 
