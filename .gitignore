@@ -46,10 +46,11 @@ next-env.d.ts
 .idea
 
 # client source files (kept locally, not in git)
-brand/*.pdf
-brand/*.png
-brand/*.jpg
-brand/*.jpeg
+brand/**/*.pdf
+brand/**/*.png
+brand/**/*.jpg
+brand/**/*.jpeg
+brand/**/*.docx
 
 # client review documents (shared outside git)
 brand/client-review/

@@ -8,7 +8,7 @@ import { ConsultForm } from '../ConsultForm';
 import { GoogleRating } from '../GoogleRating';
 import { OfficeHours } from '../OfficeHours';
 import { WhatsAppIcon } from '../WhatsAppIcon';
-import { Container, SectionHeading } from '../ui';
+import { Container, SectionHeading, keepNumbersTogether } from '../ui';
 
 function formatTime(hhmm: string, locale: string) {
   const [h, m] = hhmm.split(':').map(Number);
@@ -109,7 +109,7 @@ export async function Contact() {
                       rel="noopener noreferrer"
                       className="mt-1 block font-semibold text-ink hover:underline hover:underline-offset-4"
                     >
-                      {site.address[locale]}
+                      {keepNumbersTogether(site.address[locale])}
                     </a>
                     {site.social.googleMaps && (
                       <a

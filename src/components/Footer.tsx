@@ -7,9 +7,10 @@ import { FOREIGN_COMPANIES, pageHref, servicePage } from '@/lib/links';
 import { services } from '@/config/services';
 import { WhatsAppIcon } from './WhatsAppIcon';
 import { FacebookIcon, GoogleMapsIcon, InstagramIcon, LinkedInIcon } from './BrandIcons';
-import { Container } from './ui';
+import { Container, keepNumbersTogether } from './ui';
 
-const LINKS = ['about', 'practice', 'industries', 'track', 'process', 'why', 'contact'] as const;
+// Practice areas are left out: the next column lists them all
+const LINKS = ['about', 'industries', 'track', 'process', 'why', 'contact'] as const;
 
 const SOCIAL = [
   { key: 'linkedin', Icon: LinkedInIcon },
@@ -23,18 +24,6 @@ const practiceLink =
 const heading = 'text-sm font-semibold text-white ltr:text-xs ltr:uppercase ltr:tracking-[0.18em]';
 const pill =
   'inline-flex items-center gap-1.5 rounded-full border border-white/15 px-3.5 py-1.5 text-xs font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-navy active:bg-white/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white';
-
-/** Stops line breaks inside numbers like 613-32-3 (browsers may break after a hyphen). */
-const keepNumbersTogether = (text: string) =>
-  text.split(/(\d[\d-]*\d)/).map((part, i) =>
-    i % 2 ? (
-      <span key={i} className="whitespace-nowrap">
-        {part}
-      </span>
-    ) : (
-      part
-    ),
-  );
 
 export async function Footer() {
   const t = await getTranslations();

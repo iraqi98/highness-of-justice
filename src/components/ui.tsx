@@ -1,5 +1,17 @@
 import type { ReactNode } from 'react';
 
+/** Stops line breaks inside numbers like 613-32-3 (browsers may break after a hyphen). */
+export const keepNumbersTogether = (text: string) =>
+  text.split(/(\d[\d-]*\d)/).map((part, i) =>
+    i % 2 ? (
+      <span key={i} className="whitespace-nowrap">
+        {part}
+      </span>
+    ) : (
+      part
+    ),
+  );
+
 export function Container({ children, className = '' }: { children: ReactNode; className?: string }) {
   return <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`}>{children}</div>;
 }
