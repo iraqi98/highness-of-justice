@@ -314,6 +314,6 @@ No team photos are provided; the deck has empty photo boxes and the full profile
 1. **Fonts:** supply Somar and Bahij TheSansArabic webfont files and confirm the web licence.
 2. **Logo text:** "LAW FIRM & LEGAL CONSUL" is truncated, and "لخدمات المحاماة" differs from the legal name. Keep as-is or correct?
 3. **Team:** names and titles for the Managing Partner and the second member, plus headshots.
-4. **Arabic copy:** the newer deck's sections (§7.4–7.7, part of §7.8) exist only in English and need approved Arabic translations.
+4. ~~**Arabic copy:** the newer deck's sections (§7.4–7.7, part of §7.8) exist only in English and need approved Arabic translations.~~ ✅ **Resolved 2026-10-30:** the client approved all Arabic translations with no changes (see `TRANSLATIONS_TO_REVIEW.md`).
 5. **Photography:** only stock imagery is in the source files. Confirm whether there are real office or team photos.
 6. **Navy hex:** #141641 (logo artwork) vs #151640 (guide swatch). The website will use #141641 unless told otherwise.
