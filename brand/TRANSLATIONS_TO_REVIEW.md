@@ -1,25 +1,27 @@
-# Arabic translations for client approval
+# Arabic translations — approved
 
-These Arabic strings were written for the website because the source material (see `BRAND.md`) only had them in English. Please approve each one or send corrections. The live text is in `messages/ar.json`. The key for each string is shown in brackets.
+> ✅ **Approved by the client on 2026-10-30 — all items, no changes.**
+
+These Arabic strings were written for the website because the source material (see `BRAND.md`) only had them in English. The live text is in `messages/ar.json`. The key for each string is shown in brackets.
 
 Everything not listed here comes word-for-word from the bilingual company profile.
 
 ---
 
-## A. Content sections that existed only in English
+## A. Content sections that existed only in English — ✅ approved
 
 ### Hero / brand line
-| Key | English (source) | Arabic (proposed) |
+| Key | English (source) | Arabic (approved) |
 |---|---|---|
 | `brand.line` | Law Firm & Legal Consultancy · Baghdad | للمحاماة والاستشارات القانونية · بغداد |
 
 ### About
-| Key | English (source) | Arabic (proposed) |
+| Key | English (source) | Arabic (approved) |
 |---|---|---|
 | `about.title` | A stable legal footing for doing business in Iraq. | أساس قانوني مستقر لممارسة الأعمال في العراق. |
 
 ### Who we serve
-| Key | English (source) | Arabic (proposed) |
+| Key | English (source) | Arabic (approved) |
 |---|---|---|
 | `clients.eyebrow` | Who we serve | من نخدم |
 | `clients.title` | Four kinds of clients, one standard. | أربع فئات من العملاء، ومعيار واحد. |
@@ -33,7 +35,7 @@ Everything not listed here comes word-for-word from the bilingual company profil
 | `clients.items[3].body` | Legal support and liaison with Iraqi authorities. | الدعم القانوني والتنسيق مع الجهات العراقية. |
 
 ### Foreign-company track
-| Key | English (source) | Arabic (proposed) |
+| Key | English (source) | Arabic (approved) |
 |---|---|---|
 | `track.eyebrow` | For foreign companies | للشركات الأجنبية |
 | `track.title` | Your legal partner for entering and operating in Iraq. | شريكك القانوني لدخول السوق العراقي والعمل فيه. |
@@ -45,7 +47,7 @@ Everything not listed here comes word-for-word from the bilingual company profil
 | `track.steps[3]` | Stay compliant — Contracts, labour matters, renewals and filings. | الامتثال المستمر — العقود وشؤون العمل والتجديدات والإيداعات الرسمية. |
 
 ### How we work
-| Key | English (source) | Arabic (proposed) |
+| Key | English (source) | Arabic (approved) |
 |---|---|---|
 | `process.eyebrow` | How we work | آلية العمل |
 | `process.title` | Five steps, agreed in writing | خمس خطوات، متفق عليها كتابياً |
@@ -56,7 +58,7 @@ Everything not listed here comes word-for-word from the bilingual company profil
 | `process.steps[4]` | Handover — Final documents and ongoing support. | التسليم — الوثائق النهائية والدعم المستمر. |
 
 ### Why clients work with us
-| Key | English (source) | Arabic (proposed) |
+| Key | English (source) | Arabic (approved) |
 |---|---|---|
 | `why.eyebrow` | Why Highness of Justice | لماذا سمو العدالة |
 | `why.title` | Why clients work with us | لماذا يختارنا عملاؤنا |
@@ -67,13 +69,13 @@ Everything not listed here comes word-for-word from the bilingual company profil
 | `why.values` | Confidentiality · Professionalism · Transparency | السرية · الاحترافية · الشفافية |
 
 ### Contact
-| Key | English (source) | Arabic (proposed) |
+| Key | English (source) | Arabic (approved) |
 |---|---|---|
 | `contact.title` | Let's discuss your next step in Iraq. | لنناقش خطوتك التالية في العراق. |
 
 ---
 
-## B. Website interface text (new in both languages)
+## B. Website interface text (new in both languages) — ✅ approved
 
 These labels are not in the brand material. They were written for the site in both English and Arabic.
 
@@ -115,16 +117,16 @@ These labels are not in the brand material. They were written for the site in bo
 
 ---
 
-## C. Source corrections already applied
+## C. Source corrections already applied — ✅ approved
 
 - **Tax & Financial Legal Advisory, 2nd point (English):** the profile repeated "Obtaining work permits…" by mistake. The site uses "Monitoring companies' tax obligations", which matches the Arabic «متابعة الالتزامات الضريبية للشركات».
 - The Arabic service bullets were cleaned of PDF extraction errors (for example «ابل» → «بال», «الستشارات» → «الاستشارات»). The wording is otherwise unchanged.
 
 ---
 
-## Foreign companies page — needs client legal review
+## Foreign companies page — ✅ approved (client legal review)
 
-Page: `/en/foreign-companies/` and `/ar/foreign-companies/`. All content was assembled **only** from BRAND.md: the foreign-company track, the service bullets, who we serve, and why choose us. No legal requirements, timelines, fees, document lists or procedures were added. The items below are written in general terms or combine several source sentences, so a lawyer at the firm should confirm them before launch.
+Page: `/en/foreign-companies/` and `/ar/foreign-companies/`. All content was assembled **only** from BRAND.md: the foreign-company track, the service bullets, who we serve, and why choose us. No legal requirements, timelines, fees, document lists or procedures were added. The items below are written in general terms or combine several source sentences; the client has confirmed them (2026-10-30).
 
 ### FAQ answers (also published as FAQPage structured data for search engines)
 
@@ -137,7 +139,7 @@ Page: `/en/foreign-companies/` and `/ar/foreign-companies/`. All content was ass
 | 5 | Can we work with you in English?<br>هل يمكننا التعامل معكم باللغة الإنجليزية؟ | Yes. Advice, documents and correspondence are available in both Arabic and English.<br>نعم. نقدم المشورة والوثائق والمراسلات باللغتين العربية والإنجليزية. | §7.8 Why choose us: Arabic and English |
 | 6 | How are scope and fees agreed?<br>كيف يتم الاتفاق على النطاق والأتعاب؟ | Scope, timeline and fees are agreed in writing before work begins. Each engagement starts with a consultation and a review of your documents, followed by a written proposal.<br>يُتفق على النطاق والجدول الزمني والأتعاب كتابياً قبل بدء العمل. يبدأ كل تعاقد باستشارة ومراجعة لمستنداتك، يليها عرض مكتوب. | §7.7 How we work + §7.8 Clear terms |
 
-### Other statements to confirm
+### Other statements (confirmed)
 
 | Key | English | Arabic | Note |
 |---|---|---|---|
@@ -165,9 +167,9 @@ Page: `/en/foreign-companies/` and `/ar/foreign-companies/`. All content was ass
 
 ---
 
-## Service pages — needs client legal review
+## Service pages — ✅ approved (client legal review)
 
-Pages: `/en/services/<slug>/` and `/ar/services/<slug>/` for all 10 practice areas. The bullet lists (“What we handle”) are word-for-word from BRAND.md §7.3, and “Who it's for” reuses the four client types from §7.5. The items below were written or combined for these pages and need confirmation.
+Pages: `/en/services/<slug>/` and `/ar/services/<slug>/` for all 10 practice areas. The bullet lists (“What we handle”) are word-for-word from BRAND.md §7.3, and “Who it's for” reuses the four client types from §7.5. The items below were written or combined for these pages; the client has confirmed them (2026-10-30).
 
 ### Service introductions (hero text and search-result description)
 
@@ -184,7 +186,7 @@ Pages: `/en/services/<slug>/` and `/ar/services/<slug>/` for all 10 practice are
 | 09 | `advisory-services` | Project, business development and administrative support alongside legal advice. | دعم المشاريع وتطوير الأعمال والخدمات الإدارية إلى جانب المشورة القانونية. | Service 09 bullets |
 | 10 | `work-visas` | Residency and work permits for foreign staff, and administrative support for expatriates. | الإقامة وتصاريح العمل للموظفين الأجانب، والدعم الإداري للكوادر الأجنبية. | §7.4 'Foreign residency: Residency and work permits for foreign staff.' + service 10 bullet 3 |
 
-Note: “clearances” in the tax intro (from the company deck) is translated as «براءات الذمة». Please confirm that is the intended meaning.
+Note: “clearances” in the tax intro (from the company deck) is translated as «براءات الذمة». Confirmed by the client.
 
 ### Client types shown on each page, and the foreign-companies link
 
