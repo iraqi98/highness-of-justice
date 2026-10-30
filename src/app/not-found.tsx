@@ -6,11 +6,17 @@ export const metadata: Metadata = {
   robots: { index: false },
 };
 
+// Links from the old github.io project site: drop its path prefix, keeping query and hash.
+const legacyRedirect = String.raw`var m=location.pathname.match(/^\/highness-of-justice(\/.*)?$/);if(m)location.replace((m[1]&&m[1]!=='/'?m[1]:'/ar/')+location.search+location.hash)`;
+
 // Exported as 404.html, which GitHub Pages serves for unknown paths.
 // System fonts only: importing the web fonts here would also preload them on the root redirect page.
 export default function NotFound() {
   return (
     <html lang="ar" dir="rtl">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: legacyRedirect }} />
+      </head>
       <body className="grid min-h-screen place-items-center bg-navy p-6 font-[system-ui,sans-serif] text-white">
         <main className="max-w-xl text-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
