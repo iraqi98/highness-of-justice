@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { ChevronDown, Mail, MapPin, Phone, type LucideIcon } from 'lucide-react';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { site, whatsappUrl } from '@/config/site';
-import { withBase } from '@/config/base-path';
 import { FOREIGN_COMPANIES, pageHref, servicePage } from '@/lib/links';
 import { services } from '@/config/services';
 import { WhatsAppIcon } from './WhatsAppIcon';
@@ -44,7 +43,7 @@ export async function Footer() {
         {/* Brand */}
         <div className="flex flex-col items-center text-center lg:col-span-3 lg:items-start lg:text-start">
           <Image
-            src={withBase('/brand/logo-white.svg')}
+            src="/brand/logo-white.svg"
             alt={locale === 'ar' ? site.name.ar : site.name.en}
             width={144}
             height={144}

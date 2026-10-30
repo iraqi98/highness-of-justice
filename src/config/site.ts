@@ -4,11 +4,10 @@
 export const site = {
   /**
    * Public site URL, no trailing slash. Canonical/hreflang, sitemap, robots, Open Graph
-   * and JSON-LD all derive from it. To move to the client's new domain: set it here
-   * and add public/CNAME containing the bare domain.
+   * and JSON-LD all derive from it. If the domain changes: set it here and in public/CNAME.
    * NOTE: highnessofjustice.com is NOT controlled by the client — never use it.
    */
-  url: 'https://iraqi98.github.io/highness-of-justice',
+  url: 'https://hoj.legal',
   name: {
     en: 'Highness of Justice Law Firm & Legal Consultancy',
     ar: 'شركة سمو العدالة للمحاماة والاستشارات القانونية',

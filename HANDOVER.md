@@ -1,8 +1,8 @@
 # دليل تسليم موقع شركة سمو العدالة
 
-هذا الدليل لمن سيتولى إدارة الموقع بعد التسليم. يشرح محتوى الموقع، ومكان تعديل كل معلومة، وطريقة النشر، وخطوات ربط الدومين الجديد.
+هذا الدليل لمن سيتولى إدارة الموقع بعد التسليم. يشرح محتوى الموقع، ومكان تعديل كل معلومة، وطريقة النشر، وإعدادات الدومين.
 
-- **الموقع الحالي:** https://iraqi98.github.io/highness-of-justice/
+- **الموقع:** https://hoj.legal/
 - **الكود (Repository):** https://github.com/iraqi98/highness-of-justice
 - **التقنية:** Next.js 16 (static export) + next-intl للغتين + Tailwind CSS 4، والاستضافة على GitHub Pages.
 
@@ -14,18 +14,18 @@
 
 | الصفحة | العربية | English |
 |---|---|---|
-| الرئيسية | [/ar/](https://iraqi98.github.io/highness-of-justice/ar/) | [/en/](https://iraqi98.github.io/highness-of-justice/en/) |
-| الشركات الأجنبية | [/ar/foreign-companies/](https://iraqi98.github.io/highness-of-justice/ar/foreign-companies/) | [/en/foreign-companies/](https://iraqi98.github.io/highness-of-justice/en/foreign-companies/) |
-| تأسيس الشركات والفروع الأجنبية | [ar](https://iraqi98.github.io/highness-of-justice/ar/services/company-formation/) | [en](https://iraqi98.github.io/highness-of-justice/en/services/company-formation/) |
-| الاستشارات الضريبية والمالية | [ar](https://iraqi98.github.io/highness-of-justice/ar/services/tax-advisory/) | [en](https://iraqi98.github.io/highness-of-justice/en/services/tax-advisory/) |
-| دعم الشركات الأجنبية | [ar](https://iraqi98.github.io/highness-of-justice/ar/services/foreign-company-support/) | [en](https://iraqi98.github.io/highness-of-justice/en/services/foreign-company-support/) |
-| العقود والاستشارات القانونية | [ar](https://iraqi98.github.io/highness-of-justice/ar/services/contracts/) | [en](https://iraqi98.github.io/highness-of-justice/en/services/contracts/) |
-| تسوية النزاعات والتحكيم | [ar](https://iraqi98.github.io/highness-of-justice/ar/services/dispute-resolution/) | [en](https://iraqi98.github.io/highness-of-justice/en/services/dispute-resolution/) |
-| قوانين العمل والموارد البشرية | [ar](https://iraqi98.github.io/highness-of-justice/ar/services/labor-law/) | [en](https://iraqi98.github.io/highness-of-justice/en/services/labor-law/) |
-| حماية الملكية الفكرية | [ar](https://iraqi98.github.io/highness-of-justice/ar/services/intellectual-property/) | [en](https://iraqi98.github.io/highness-of-justice/en/services/intellectual-property/) |
-| المتابعة الحكومية والامتثال | [ar](https://iraqi98.github.io/highness-of-justice/ar/services/government-relations/) | [en](https://iraqi98.github.io/highness-of-justice/en/services/government-relations/) |
-| الخدمات الاستشارية والإدارية | [ar](https://iraqi98.github.io/highness-of-justice/ar/services/advisory-services/) | [en](https://iraqi98.github.io/highness-of-justice/en/services/advisory-services/) |
-| تأشيرات العمل والكوادر الأجنبية | [ar](https://iraqi98.github.io/highness-of-justice/ar/services/work-visas/) | [en](https://iraqi98.github.io/highness-of-justice/en/services/work-visas/) |
+| الرئيسية | [/ar/](https://hoj.legal/ar/) | [/en/](https://hoj.legal/en/) |
+| الشركات الأجنبية | [/ar/foreign-companies/](https://hoj.legal/ar/foreign-companies/) | [/en/foreign-companies/](https://hoj.legal/en/foreign-companies/) |
+| تأسيس الشركات والفروع الأجنبية | [ar](https://hoj.legal/ar/services/company-formation/) | [en](https://hoj.legal/en/services/company-formation/) |
+| الاستشارات الضريبية والمالية | [ar](https://hoj.legal/ar/services/tax-advisory/) | [en](https://hoj.legal/en/services/tax-advisory/) |
+| دعم الشركات الأجنبية | [ar](https://hoj.legal/ar/services/foreign-company-support/) | [en](https://hoj.legal/en/services/foreign-company-support/) |
+| العقود والاستشارات القانونية | [ar](https://hoj.legal/ar/services/contracts/) | [en](https://hoj.legal/en/services/contracts/) |
+| تسوية النزاعات والتحكيم | [ar](https://hoj.legal/ar/services/dispute-resolution/) | [en](https://hoj.legal/en/services/dispute-resolution/) |
+| قوانين العمل والموارد البشرية | [ar](https://hoj.legal/ar/services/labor-law/) | [en](https://hoj.legal/en/services/labor-law/) |
+| حماية الملكية الفكرية | [ar](https://hoj.legal/ar/services/intellectual-property/) | [en](https://hoj.legal/en/services/intellectual-property/) |
+| المتابعة الحكومية والامتثال | [ar](https://hoj.legal/ar/services/government-relations/) | [en](https://hoj.legal/en/services/government-relations/) |
+| الخدمات الاستشارية والإدارية | [ar](https://hoj.legal/ar/services/advisory-services/) | [en](https://hoj.legal/en/services/advisory-services/) |
+| تأشيرات العمل والكوادر الأجنبية | [ar](https://hoj.legal/ar/services/work-visas/) | [en](https://hoj.legal/en/services/work-visas/) |
 
 ويُولَّد تلقائياً: `sitemap.xml` و`robots.txt` و`manifest.webmanifest` وبيانات JSON-LD (LegalService) لمحركات البحث.
 
@@ -83,8 +83,6 @@
 3. في `src/styles/fonts.ts` غيّر `USE_BRAND_FONTS = false` إلى `true`.
 4. commit وpush.
 
-⚠ مسارات الخطوط مطلقة (`/fonts/...`)، لذلك **تعمل فقط بعد ربط الدومين الخاص** (القسم 5)، ولن تظهر على رابط github.io الحالي. فعّلها بعد ربط الدومين.
-
 ---
 
 ## 4. النشر (Deployment)
@@ -96,7 +94,6 @@ push إلى main  ←  GitHub Actions (.github/workflows/deploy.yml)  ←  npm c
 - كل push إلى `main` يبني الموقع وينشره تلقائياً خلال دقيقتين تقريباً.
 - تتابع الحالة من تبويب **Actions** في الـ repository (✓ أخضر = تم النشر).
 - يمكن إعادة النشر يدوياً: Actions ← Deploy to GitHub Pages ← **Run workflow**.
-- الـ `basePath` يُضبط تلقائياً: `/highness-of-justice` على github.io، وفارغ بعد ربط الدومين. لا تحتاج تعديله.
 
 للتجربة محلياً:
 ```bash
@@ -108,15 +105,12 @@ npm run lint       # فحص TypeScript
 
 ---
 
-## 5. ربط الدومين الجديد (Hostinger)
+## 5. الدومين (Hostinger)
 
-استبدل `example.com` في الخطوات بالدومين الفعلي.
+الموقع منشور على `https://hoj.legal` من جذر الدومين (بدون مسار فرعي)، و`www.hoj.legal` يحوّل إليه. الرابط القديم `iraqi98.github.io/highness-of-justice` يحوّل تلقائياً إلى الدومين الجديد.
 ⚠ لا تستخدم `highnessofjustice.com`: هذا الدومين ليس ملك العميل.
 
-### أ. في Hostinger ← Domains ← DNS / Nameservers
-
-1. احذف أي سجل `A` أو `CNAME` موجود للجذر `@` وللـ `www` (عادةً تكون سجلات parking افتراضية من Hostinger).
-2. أضف السجلات التالية:
+### أ. سجلات DNS في Hostinger ← Domains ← DNS / Nameservers
 
 | Type | Name | Value |
 |---|---|---|
@@ -124,44 +118,31 @@ npm run lint       # فحص TypeScript
 | A | @ | 185.199.109.153 |
 | A | @ | 185.199.110.153 |
 | A | @ | 185.199.111.153 |
-| AAAA | @ | 2606:50c0:8000::153 |
-| AAAA | @ | 2606:50c0:8001::153 |
-| AAAA | @ | 2606:50c0:8002::153 |
-| AAAA | @ | 2606:50c0:8003::153 |
 | CNAME | www | iraqi98.github.io |
 
-3. ⚠ **لا تلمس سجلات MX ولا TXT الخاصة بالإيميل** (SPF/DKIM/DMARC). حذفها يوقف الإيميل الخاص بالدومين.
-4. انتشار DNS يأخذ من دقائق إلى 24 ساعة. للتحقق: `nslookup example.com` يجب أن يُرجع عناوين `185.199.x.153`.
+- ⚠ **لا تلمس سجلات MX ولا TXT الخاصة بالإيميل** (SPF/DKIM/DMARC). حذفها يوقف إيميل `info@hoj.legal`.
+- للتحقق: `nslookup hoj.legal` يجب أن يُرجع عناوين `185.199.x.153`. أي تغيير في DNS يأخذ من دقائق إلى 24 ساعة لينتشر.
+- سجلات `AAAA` غير مضافة حالياً، وهي اختيارية لدعم IPv6: `2606:50c0:8000::153` و`2606:50c0:8001::153` و`2606:50c0:8002::153` و`2606:50c0:8003::153`.
 
 ### ب. في GitHub
 
-1. Repository ← **Settings ← Pages ← Custom domain**: اكتب `example.com` واضغط Save، وانتظر نجاح "DNS check".
+1. الدومين مضبوط في Repository ← **Settings ← Pages ← Custom domain** على `hoj.legal`. هذا الإعداد هو الذي يحدد الدومين، لأن النشر يتم عبر GitHub Actions، ولا يقرأ GitHub ملف `public/CNAME` في هذه الحالة.
 2. (يُنصح به) لحماية الدومين: Account **Settings ← Pages ← Add a domain**، وأضف سجل `TXT` الذي يطلبه GitHub في Hostinger.
 
 ### ج. في الكود
 
-1. في `src/config/site.ts` غيّر:
-   ```ts
-   url: 'https://example.com',
-   ```
-   (بدون `/` في النهاية). منه تُبنى روابط canonical وsitemap وOpen Graph وJSON-LD.
-2. أنشئ الملف `public/CNAME` وفيه سطر واحد هو الدومين فقط:
-   ```
-   example.com
-   ```
-3. commit وpush إلى `main`، وانتظر نجاح الـ workflow في Actions. سيُبنى الموقع تلقائياً بدون `/highness-of-justice`.
+إذا تغيّر الدومين مستقبلاً، عدّله في `url` داخل `src/config/site.ts` (بدون `/` في النهاية)، ومنه تُبنى روابط canonical وsitemap وOpen Graph وJSON-LD، وفي `public/CNAME`، ثم في إعداد GitHub أعلاه.
 
 ### د. HTTPS
 
-بعد أن يصدر GitHub الشهادة (قد يأخذ حتى ساعة)، فعّل **Enforce HTTPS** في Settings ← Pages.
+بعد أن يصدر GitHub الشهادة (قد يأخذ حتى ساعة بعد ضبط DNS)، فعّل **Enforce HTTPS** في Settings ← Pages.
 
 ### هـ. بعد الربط
 
-- افتح `https://example.com/ar/` و`https://www.example.com/` وتأكد أن الثاني يحوّل إلى الأول.
+- افتح `https://hoj.legal/ar/` و`https://www.hoj.legal/` وتأكد أن الثاني يحوّل إلى الأول.
 - فعّل خطوط الهوية إن وصلت (القسم 3).
-- سجّل الدومين في Google Search Console وأرسل `https://example.com/sitemap.xml`.
+- سجّل الدومين في Google Search Console وأرسل `https://hoj.legal/sitemap.xml`.
 - حدّث رابط الموقع في Google Business Profile وInstagram وFacebook وLinkedIn.
-- حدّث سطر Website في `brand/BRAND.md` §2.
 
 ---
 
@@ -169,13 +150,12 @@ npm run lint       # فحص TypeScript
 
 | # | البند | ما المطلوب | أين يُعدَّل |
 |---|---|---|---|
-| 1 | **الدومين** | اسم الدومين الجديد والوصول إلى حساب Hostinger | القسم 5 |
-| 2 | **الخطوط** | ملفات Somar وBahij TheSansArabic بصيغة woff2 مع ترخيص الويب | القسم 3 |
-| 3 | **الصور** | صور حقيقية للمكتب والفريق بدل صور Unsplash المؤقتة | `src/config/images.ts` |
-| 4 | **نص الشعار** | الشعار مكتوب فيه "LAW FIRM & LEGAL CONSUL" (مقطوع) و"لخدمات المحاماة…". هل يُصحَّح؟ | ملفات `public/brand/` |
-| 5 | **الفريق** | أسماء ومناصب وصور الشريك المدير والعضو الثاني، إذا أراد العميل إضافة قسم للفريق | يحتاج قسماً جديداً |
-| 6 | **لون الهوية** | تأكيد #141641 (المستخدم حالياً) أو #151640 | `src/app/globals.css` |
-| 7 | **تقييم Google** | تحديث الرقم دورياً | `site.googleRating` |
+| 1 | **الخطوط** | ملفات Somar وBahij TheSansArabic بصيغة woff2 مع ترخيص الويب | القسم 3 |
+| 2 | **الصور** | صور حقيقية للمكتب والفريق بدل صور Unsplash المؤقتة | `src/config/images.ts` |
+| 3 | **نص الشعار** | الشعار مكتوب فيه "LAW FIRM & LEGAL CONSUL" (مقطوع) و"لخدمات المحاماة…". هل يُصحَّح؟ | ملفات `public/brand/` |
+| 4 | **الفريق** | أسماء ومناصب وصور الشريك المدير والعضو الثاني، إذا أراد العميل إضافة قسم للفريق | يحتاج قسماً جديداً |
+| 5 | **لون الهوية** | تأكيد #141641 (المستخدم حالياً) أو #151640 | `src/app/globals.css` |
+| 6 | **تقييم Google** | تحديث الرقم دورياً | `site.googleRating` |
 
 ---
 

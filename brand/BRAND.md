@@ -33,7 +33,7 @@ Stamp registration number: **رقم التسجيل 25835** (Registration No. 258
 
 | | |
 |---|---|
-| Website | https://iraqi98.github.io/highness-of-justice (temporary, GitHub Pages) — the client has bought a new domain, to be confirmed |
+| Website | https://hoj.legal |
 | ⚠ Domain warning | **highnessofjustice.com is NOT controlled by the client — do not link to it.** The company profile PDFs list www.highnessofjustice.com; ignore that. |
 | Email | info@hoj.legal |
 | Phone / WhatsApp | +964 774 975 0001 (`tel:+9647749750001`, `https://wa.me/9647749750001`) |

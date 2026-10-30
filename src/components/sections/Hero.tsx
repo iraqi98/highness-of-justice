@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { images } from '@/config/images';
-import { withBase } from '@/config/base-path';
 import { GoogleRating } from '../GoogleRating';
 import { Container } from '../ui';
 
@@ -13,7 +12,7 @@ export async function Hero() {
     <section id="top" className="relative isolate overflow-hidden bg-navy text-white">
       {/* Faint emblem watermark, like the brand guide covers */}
       <Image
-        src={withBase('/brand/emblem-white.svg')}
+        src="/brand/emblem-white.svg"
         alt=""
         width={900}
         height={900}

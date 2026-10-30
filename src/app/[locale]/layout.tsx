@@ -4,7 +4,6 @@ import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { absoluteUrl } from '@/config/site';
-import { withBase } from '@/config/base-path';
 import { pageMetadata } from '@/lib/metadata';
 import { fontClassName } from '@/styles/fonts';
 
@@ -32,10 +31,10 @@ export async function generateMetadata({ params }: LayoutProps<'/[locale]'>): Pr
     ...pageMetadata({ locale, title: t('title'), description: t('description') }),
     icons: {
       icon: [
-        { url: withBase('/favicon.ico'), sizes: 'any' },
-        { url: withBase('/favicon.svg'), type: 'image/svg+xml' },
+        { url: '/favicon.ico', sizes: 'any' },
+        { url: '/favicon.svg', type: 'image/svg+xml' },
       ],
-      apple: withBase('/apple-touch-icon.png'),
+      apple: '/apple-touch-icon.png',
     },
   };
 }
